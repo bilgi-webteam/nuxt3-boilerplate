@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-between min-h-screen">
-    <div class="max-w-screen-xl p-4 mx-auto">
+    <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <Header />
       <main>
