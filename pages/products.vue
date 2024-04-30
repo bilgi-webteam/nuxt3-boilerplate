@@ -4,7 +4,9 @@
     <h2>{{ $t('welcome') }}</h2>
     <component :is="currentContent"></component>
   </div>
-  <Products />
+  <div class="p-4 mb-4">
+    <Products />
+  </div>
 </template>
 <script setup lang="ts">
 const pageName = 'products';
@@ -12,7 +14,7 @@ const { t } = useI18n();
 const { headerData } = useHeaderData();
 const { currentContent } = pageSetup(pageName);
 headerData.value = {
-  image: '/images/0.png',
+  image: '/images/a.png',
   title: t(`${pageName}HeaderTitle`),
   paragraph: t(`${pageName}HeaderDescription`)
 };

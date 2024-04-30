@@ -6,13 +6,13 @@
           <BilgiLogo />
           <ColorModeSwitcher />
         </div>
-        <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+        <div class="px-6 pt-6 lg:ml-0 lg:max-w-2xl lg:pl-8 lg:pr-0">
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <span class="sr-only">Open main menu</span>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
-            <div class="hidden lg:ml-12 lg:flex lg:gap-x-14">
+            <div class="hidden lg:ml-4 lg:flex lg:gap-x-14">
               <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-slate-950 dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
               <OtherLang class="text-sm font-semibold leading-6 text-slate-950 dark:text-slate-100" />
             </div>
@@ -51,7 +51,7 @@
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
 
-          <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+          <div class="relative px-6 py-32 sm:py-40 lg:px-4 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
               <h1 class="text-3xl font-bold tracking-tight text-slate-950 dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
               <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">{{ headerData.paragraph || ' ' }}</p>

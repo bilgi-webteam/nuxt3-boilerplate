@@ -13,7 +13,7 @@ const { t } = useI18n();
 const { headerData } = useHeaderData();
 const { currentContent } = pageSetup(pageName);
 headerData.value = {
-  image: '/images/0.png',
+  image: '/images/d.png',
   title: t(`${pageName}HeaderTitle`),
   paragraph: t(`${pageName}HeaderDescription`)
 };
