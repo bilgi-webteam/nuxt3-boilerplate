@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="px-4 py-2">
+    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
       {{ locale.name }}
     </NuxtLink>
   </div>
@@ -16,7 +16,5 @@
   })
 </script>
 <style scoped>
-a:hover {
-  @apply bg-black/20;
-}
+
 </style>

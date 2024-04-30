@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between gap-4">
     <!-- <pre>{{ $colorMode.value }}</pre> -->
     <div>
-      <button aria-label="Color Mode" class="inline-block h-10 px-4 py-2 text-sm leading-none text-green-300 rounded bg-green-950 dark:bg-green-300"
+      <button aria-label="Color Mode" class="inline-block h-10 px-4 py-2 text-sm leading-none rounded text-slate-300 bg-slate-950 dark:bg-slate-300"
       @click="changeColor">
         <ColorScheme>
             <SunIcon v-if="colorMode.value === 'dark'" class="text-xl text-black size-6" />
@@ -12,7 +12,7 @@
     </div>
     <select
       v-model="colorMode.preference"
-      class="hidden h-10 p-1 text-green-300 border rounded bg-green-950 dark:bg-green-300 dark:text-green-950 dark:border-gray-700"
+      class="hidden h-10 p-1 border rounded text-slate-300 bg-slate-950 dark:bg-slate-300 dark:text-slate-950 dark:border-gray-700"
     >
       <option value="system">System</option>
       <option value="light">Light</option>

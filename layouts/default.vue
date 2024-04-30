@@ -1,10 +1,12 @@
 <template>
-  <div class="max-w-screen-xl p-4 mx-auto">
-    <NuxtLoadingIndicator />
-    <Header />
-    <main>
-      <NuxtPage />
-    </main>
+  <div class="flex flex-col justify-between min-h-screen">
+    <div class="max-w-screen-xl p-4 mx-auto">
+      <NuxtLoadingIndicator />
+      <Header />
+      <main>
+        <NuxtPage />
+      </main>
+    </div>
     <Footer />
   </div>
 </template>
