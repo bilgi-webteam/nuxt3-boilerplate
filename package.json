@@ -7,7 +7,14 @@
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "lintfix": "yarn lint:js --fix",
+    "deldist:local": "rm -rf dist/",
+    "deldist:server": "ssh $npm_package_config_server rm -rf $npm_package_config_path/*",
+    "copydist:server": "scp -r dist/. $npm_package_config_server:$npm_package_config_path",
+    "deploy": "yarn deldist:local && nuxt generate && yarn deldist:server && yarn copydist:server"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.21",
