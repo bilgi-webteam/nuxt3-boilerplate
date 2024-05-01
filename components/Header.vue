@@ -1,5 +1,5 @@
 <template>  
-  <div class="bg-slate-100 dark:bg-black [&_.router-link-active]:border-b-2 [&_.router-link-active]:border-green-500">
+  <div class="bg-slate-100 dark:bg-black [&_.router-link-active]:border-b-2 [&_.router-link-active]:border-green-500 mb-10">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between mx-8">

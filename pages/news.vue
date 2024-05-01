@@ -1,8 +1,5 @@
 <template>
-  <div id="content" class="p-4 mb-4">
-    <h2 class="text-2xl font-bold my-6">{{ $t('welcome') }}</h2>
-    <component :is="currentContent"></component>
-  </div>
+  <component :is="currentContent"></component>
   <div class="p-4 mb-4">
     <News />
   </div>
