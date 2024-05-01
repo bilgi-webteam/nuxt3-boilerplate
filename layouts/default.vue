@@ -28,7 +28,8 @@
         
         [&_h5]:my-1 
         [&_h5]:text-base 
-        [&_h5]:font-bold"
+        [&_h5]:font-bold
+        "
       >
         <NuxtPage />
       </main>
