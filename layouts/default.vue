@@ -7,9 +7,7 @@
         <NuxtPage />
       </main>
     </div>
-    <div class="">
-      <Footer />
-    </div>
+    <Footer />
   </div>
 </template>
 <script setup lang="ts">
