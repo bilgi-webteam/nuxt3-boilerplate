@@ -24,7 +24,9 @@
         <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-black sm:max-w-sm sm:ring-1 sm:ring-black/10">
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
+              <client-only>
               <span class="sr-only">{{ headerData.title || ' ' }}</span>
+              </client-only>
               <BilgiLogo />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
@@ -64,10 +66,15 @@
         
       </div>
       <div class="bg-slate-100 dark:bg-black lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <client-only>
         <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" :src="headerData.image || '/images/0.png'" alt="" />
+        </client-only>
       </div>
     </div>
   </div>
+
+
+
 </template>
 <script setup lang="ts">
   const { headerData } = useHeaderData();
