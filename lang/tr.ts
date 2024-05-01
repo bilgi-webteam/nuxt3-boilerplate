@@ -32,6 +32,8 @@ export default {
   nonews: 'Haber Bulunamadi',
   open: 'Aç',
   close: 'Kapat',
+  menuopen: 'Menüyü Aç',
+  menuclose: 'Menüyü Kapat',
   alert: 'Uyarı',
   events: 'Etkinlikler',
   price: 'Fiyat',

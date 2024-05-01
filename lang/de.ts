@@ -1,21 +1,39 @@
 export default {
   siteName: 'Webseitenname',
   globalDescription: 'Webseitenbeschreibung',
+
   index: 'Startseite',
   indexDescription: 'Beschreibung der Startseite',
+  indexHeaderTitle: 'Startseite Header Titel',
+  indexHeaderDescription: 'Startseite Header Beschreibung',
+  
   about: 'Über uns',
   aboutDescription: 'Beschreibung der Seite Über uns',
+  aboutHeaderTitle: 'Über uns Seite Header Titel',
+  aboutHeaderDescription: 'Über uns Seite Header Beschreibung',
+  
   contact: 'Kontakt',
   contactDescription: 'Kontaktseitenbeschreibung',
+  contactHeaderTitle: 'Kontaktseite Header Titel',
+  contactHeaderDescription: 'Kontaktseite Header Beschreibung',
+
   news: 'Nachrichten',
   newsDescription: 'Nachrichtenseitenbeschreibung',
+  newsHeaderTitle: 'Nachrichten Seite Header Titel',
+  newsHeaderDescription: 'Nachrichten Seite Header Beschreibung',
+  
   products: 'Produkte',
   productsDescription: 'Produktseitenbeschreibung',
+  productsHeaderTitle: 'Produkte Seite Header Titel',
+  productsHeaderDescription: 'Produkte Seite Header Beschreibung',
+  
   welcome: 'Willkommen',
   loading: 'Laden...',
   nonews: 'Keine Nachrichten gefunden',
   open: 'Öffnen',
   close: 'Schließen',
+  menuopen: 'Menü öffnen',
+  menuclose: 'Menü schließen',
   alert: 'Alarm',
   events: 'Veranstaltungen',
   page: 'Seite',

@@ -9,7 +9,7 @@
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
-              <span class="sr-only">Open main menu</span>
+              <span class="sr-only">{{ $t('openmenu') }}</span>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
             <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
@@ -30,7 +30,7 @@
               <BilgiLogo />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
-              <span class="sr-only">Close menu</span>
+              <span class="sr-only">{{ $t('closemenu') }}</span>
               <XMarkIcon class="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
@@ -70,6 +70,7 @@
   </div>
 </template>
 <script setup lang="ts">
+  const { t } = useI18n();
   const { headerData } = useHeaderData();
 
   import { ref } from 'vue'

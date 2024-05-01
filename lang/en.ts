@@ -32,6 +32,8 @@ export default {
   nonews: 'No News Found',
   open: 'Open',
   close: 'Close',
+  menuopen: 'Open Menu',
+  menuclose: 'Close Menu',
   alert: 'Alert',
   events: 'Events',
   page: 'Page',
