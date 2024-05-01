@@ -27,6 +27,16 @@ export default {
   aboutHeaderTitle: 'About Page Header Title',
   aboutHeaderDescription: 'About Page Header Description',
 
+  about_theteam: 'The Team',
+  about_theteamDescription: 'The Team Page Description',
+  about_theteamHeaderTitle: 'The Team Page Header Title',
+  about_theteamHeaderDescription: 'The Team Page Header Description',
+
+  about_company: 'The Company',
+  about_companyDescription: 'The Company Page Description',
+  about_companyHeaderTitle: 'The Company Page Header Title',
+  about_companyHeaderDescription: 'The Company Page Header Description',
+
   contact: 'Contact',
   contactDescription: 'Contact Page Description',
   contactHeaderTitle: 'Contact Page Header Title',

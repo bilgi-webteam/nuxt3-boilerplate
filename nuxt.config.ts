@@ -56,10 +56,14 @@ export default defineNuxtConfig({
         en: '/about',
         tr: '/hakkimizda',
       },
-      // about_whoweare: {
-      //   en: '/about/whoweare',
-      //   tr: '/hakkimizda/kimiz',
-      // },
+      about_theteam: {
+        en: '/about/team',
+        tr: '/hakkimizda/ekip',
+      },
+      about_company: {
+        en: '/about/company',
+        tr: '/hakkimizda/firma',
+      },
       contact: {
         en: '/contact',
         tr: '/iletisim',

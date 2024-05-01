@@ -14,6 +14,7 @@
             </button>
             <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
               <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
+              
               <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
               <ColorModeSwitcherMenu />
             </div>

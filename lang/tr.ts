@@ -26,6 +26,16 @@ export default {
   aboutDescription: 'Hakkımızda Sayfası Açıklaması',
   aboutHeaderTitle: 'Hakkımızda Sayfası Üstalan Başlık',
   aboutHeaderDescription: 'Hakkımızda Sayfası Üstalan Açıklaması',
+
+  about_theteam: 'Ekip',
+  about_theteamDescription: 'Ekip Sayfası Açıklaması',
+  about_theteamHeaderTitle: 'Ekip Sayfası Üstalan Başlık',
+  about_theteamHeaderDescription: 'Ekip Sayfası Üstalan Açıklaması',
+
+  about_company: 'Firma',
+  about_companyDescription: 'Firma Sayfası Açıklaması',
+  about_companyHeaderTitle: 'Firma Sayfası Üstalan Başlık',
+  about_companyHeaderDescription: 'Firma Sayfası Üstalan Açıklaması',
   
   contact: 'İletişim',
   contactDescription: 'İletişim Sayfası Açıklaması',
