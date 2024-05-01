@@ -7,7 +7,7 @@
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between mx-4">
           <BilgiLogo />
-          <ColorModeSwitcher />
+          <!-- <ColorModeSwitcher /> -->
         </div>
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
           <!-- Desktop -->
