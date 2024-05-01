@@ -35,6 +35,7 @@ export default {
   alert: 'Uyarı',
   events: 'Etkinlikler',
   price: 'Fiyat',
+  page: 'Sayfa',
   rating: 'Puan',
   stock: 'Stok',
   brand: 'Marka',

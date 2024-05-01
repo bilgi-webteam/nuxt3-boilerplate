@@ -67,7 +67,7 @@ onMounted(fetchProducts);
       <button @click="previousPage" :disabled="page === 1" class="disabled:text-gray-400 disabled:cursor-not-allowed">
       <ChevronLeftIcon class="text-xl size-6" />
       </button>
-      <span>Page {{ page }} of {{ totalPages }}</span>
+      <span>{{$t('page')}} {{ page }} / {{ totalPages }}</span>
       <button @click="nextPage" :disabled="page === totalPages" class="disabled:text-gray-400 disabled:cursor-not-allowed">
       <ChevronRightIcon class="text-xl size-6" />
       </button>
@@ -100,7 +100,7 @@ onMounted(fetchProducts);
       <button @click="previousPage" :disabled="page === 1" class="disabled:text-gray-400 disabled:cursor-not-allowed">
       <ChevronLeftIcon class="text-xl size-6" />
       </button>
-      <span>Page {{ page }} of {{ totalPages }}</span>
+      <span>{{$t('price')}} {{ page }} / {{ totalPages }}</span>
       <button @click="nextPage" :disabled="page === totalPages" class="disabled:text-gray-400 disabled:cursor-not-allowed">
       <ChevronRightIcon class="text-xl size-6" />
       </button>

@@ -34,6 +34,7 @@ export default {
   close: 'Close',
   alert: 'Alert',
   events: 'Events',
+  page: 'Page',
   price: 'Price',
   rating: 'Rating',
   stock: 'Stock',

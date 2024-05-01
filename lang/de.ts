@@ -18,6 +18,7 @@ export default {
   close: 'Schließen',
   alert: 'Alarm',
   events: 'Veranstaltungen',
+  page: 'Seite',
   price: 'Preis',
   rating: 'Bewertung',
   stock: 'Bestand',
