@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen font-Raleway">
+  <div class="flex flex-col justify-between min-h-svh font-Raleway">
     <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <Header />
       <main 
       class="
-        [&_p]:my-4 
+        [&_p]:mb-4 
 
         [&_a]:px-1 
         [&_a]:bg-black/70 
@@ -13,24 +13,22 @@
         [&_a]:dark:bg-white/80 
         [&_a]:dark:text-black 
         
-        [&_h2]:my-6 
+        [&_h2]:mb-6 
         [&_h2]:text-2xl 
         [&_h2]:font-bold 
         
-        [&_h3]:my-4 
         [&_h3]:mb-4 
         [&_h3]:text-xl 
         [&_h3]:font-bold 
         
         [&_h4]:text-lg 
         [&_h4]:font-bold 
-        [&_h4]:my-2 
+        [&_h4]:mb-2 
         
-        [&_h5]:my-1 
+        [&_h5]:mb-1 
         [&_h5]:text-base 
         [&_h5]:font-bold
-        "
-      >
+      ">
         <NuxtPage />
       </main>
     </div>

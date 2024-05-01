@@ -12,7 +12,7 @@
       <ChevronRightIcon class="text-xl size-6" />
       </button>
     </div>
-    <div class="grid grid-cols-2 gap-4 mb-4">
+    <div class="grid gap-4 mb-4 md:grid-cols-2">
       <div v-for="product in products" :key="product.id" class="p-4 bg-gray-200 dark:bg-gray-800">
         <div class="">
           <div class="md:min-h-12">

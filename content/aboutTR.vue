@@ -16,7 +16,7 @@
   <li>Disrupt master cleanse authentic ennui 8-bit</li>
 </ul>
 
-<img class="w-full h-auto rounded-lg" src="https://picsum.photos/1280/768?random=1" />
+<img class="w-full h-auto mb-4 rounded-lg" src="https://picsum.photos/1280/768?random=1" />
 
 <h4>Subheader h4</h4>
 <p>Deep v you probably haven't heard of them PBRB polaroid sriracha. <strong><em>Organic cardigan Marfa</em></strong>, ennui sriracha locavore post-ironic jean shorts Austin banjo viral letterpress photo booth literally. Put a bird on it four loko McSweeney's Brooklyn irony, chambray dreamcatcher mixtape. Small batch squid <u>American Apparel chia cray</u>, next level lomo artisan PBRB aesthetic food truck gastropub wolf Thundercats. YOLO salvia Cosby sweater forage, retro Pinterest organic cred post-ironic pop-up cliche vinyl kale chips church-key ethical. Fashion axe semiotics Vice PBR leggings butcher. Helvetica disrupt cliche lomo.</p>
