@@ -59,7 +59,7 @@ onMounted(fetchProducts);
 
 </script>
 <template>
-  <div v-if="pending" class="p-4 mb-2 bg-orange-300 last:mb-0">
+  <div v-if="pending" class="p-4 mb-2 bg-gray-300 last:mb-0">
     {{ $t('loading') }}
   </div>
   <div v-else>
@@ -73,10 +73,10 @@ onMounted(fetchProducts);
       </button>
     </div>
     <div class="grid grid-cols-2 gap-4 mb-4">
-      <div v-for="product in products" :key="product.id" class="p-4 bg-orange-200 dark:bg-orange-950">
+      <div v-for="product in products" :key="product.id" class="p-4 bg-gray-200 dark:bg-gray-800">
         <div class="">
           <h3 class="mb-4 text-xl">{{ product.title }}</h3>
-          <img :src="product.thumbnail" alt="Product thumbnail" class="object-cover w-full h-auto mb-4 border border-orange-500 max-h-40">
+          <img :src="product.thumbnail" alt="Product thumbnail" class="object-cover w-full h-auto mb-4 border border-gray-500 max-h-40">
           <p class="mb-4">{{ product.description }}</p>
           <div class="text-gray-500 dark:text-gray-200">
             <div class="">{{$t('price')}}: ${{ product.price }} ({{ product.discountPercentage }}% off)</div>
@@ -85,7 +85,7 @@ onMounted(fetchProducts);
             <div class="">{{$t('brand')}}: {{ product.brand }}</div>
             <div class="">{{$t('category')}}: {{ product.category }}</div>
           </div>
-          <h4 class="my-4 border-b-[1px] border-orange-300">{{$t('images')}}</h4>
+          <h4 class="my-4 border-b-[1px] border-gray-300">{{$t('images')}}</h4>
           <div class="grid grid-cols-6">
             <img v-for="image in product.images" :src="image" :alt="`${product.title} image`" :key="image" class="object-cover h-auto max-w-20 max-h-20">
           </div>

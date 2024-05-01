@@ -1,5 +1,5 @@
 <template>  
-  <div class="bg-slate-100 dark:bg-slate-950">
+  <div class="bg-slate-100 dark:bg-black">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between mx-8">
@@ -13,15 +13,15 @@
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
             <div class="hidden lg:ml-4 lg:flex lg:gap-x-14">
-              <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-slate-950 dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
-              <OtherLang class="text-sm font-semibold leading-6 text-slate-950 dark:text-slate-100" />
+              <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
+              <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
             </div>
           </nav>
         </div>
       </div>
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-50" />
-        <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-950 sm:max-w-sm sm:ring-1 sm:ring-slate-950/10">
+        <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-black sm:max-w-sm sm:ring-1 sm:ring-black/10">
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
               <span class="sr-only">{{ headerData.title || ' ' }}</span>
@@ -35,8 +35,8 @@
           <div class="flow-root mt-6">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="py-6 space-y-2">
-                <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-slate-950 dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
-                <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-slate-950 dark:text-slate-100 hover:bg-gray-50s"/>
+                <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-black dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
+                <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-black dark:text-slate-100 hover:bg-gray-50s"/>
               </div>
             </div>
           </div>
@@ -47,13 +47,13 @@
     <div class="relative">
       <div class="mx-auto max-w-7xl">
         <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-          <svg class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-950 lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <svg class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-black lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
 
           <div class="relative px-6 py-32 sm:py-40 lg:px-4 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
-              <h1 class="text-3xl font-bold tracking-tight text-slate-950 dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
+              <h1 class="text-3xl font-bold tracking-tight text-black dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
               <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">{{ headerData.paragraph || ' ' }}</p>
             </div>
           </div>
@@ -61,7 +61,7 @@
         </div>
         
       </div>
-      <div class="bg-slate-100 dark:bg-slate-950 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <div class="bg-slate-100 dark:bg-black lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" :src="headerData.image || '/images/0.png'" alt="" />
       </div>
     </div>

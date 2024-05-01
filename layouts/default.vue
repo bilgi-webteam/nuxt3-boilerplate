@@ -48,7 +48,7 @@
     font-family: 'Raleway', sans-serif;
   }
   body {
-    @apply bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-200;
+    @apply bg-slate-100 dark:bg-black text-black dark:text-slate-200;
   }
   #header {
     .router-link-active {
