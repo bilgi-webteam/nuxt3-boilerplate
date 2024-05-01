@@ -1,6 +1,21 @@
 export default {
+  // Global
   siteName: 'Website Adı',
   globalDescription: 'Web Sitesi Açıklaması',
+
+  welcome: 'Hoşgeldiniz',
+  loading: 'Yükleniyor...',
+  
+  dark: 'Koyu',
+  light: 'Açık',
+  open: 'Aç',
+  close: 'Kapat',
+  menuopen: 'Menüyü Aç',
+  menuclose: 'Menüyü Kapat',
+  
+  alert: 'Uyarı',
+
+  // Sayfalar
 
   index: 'Anasayfa',
   indexDescription: 'Anasayfa Açıklaması',
@@ -18,24 +33,16 @@ export default {
   contactHeaderDescription: 'İletişim Sayfası Üstalan Açıklaması',
   
   news: 'Haberler',
+  events: 'Etkinlikler',
   newsDescription: 'Haberler Sayfası Açıklaması',
   newsHeaderTitle: 'Haberler Sayfası Üstalan Başlık',
   newsHeaderDescription: 'Haberler Sayfası Üstalan Açıklaması',
+  nonews: 'Haber Bulunamadi',
   
   products: 'Ürünler',
   productsDescription: 'Ürünler Sayfası Açıklaması',
   productsHeaderTitle: 'Ürünler Sayfası Üstalan Başlık',
   productsHeaderDescription: 'Ürünler Sayfası Üstalan Açıklaması',
-  
-  welcome: 'Hoşgeldiniz',
-  loading: 'Yükleniyor...',
-  nonews: 'Haber Bulunamadi',
-  open: 'Aç',
-  close: 'Kapat',
-  menuopen: 'Menüyü Aç',
-  menuclose: 'Menüyü Kapat',
-  alert: 'Uyarı',
-  events: 'Etkinlikler',
   price: 'Fiyat',
   page: 'Sayfa',
   rating: 'Puan',
@@ -45,4 +52,5 @@ export default {
   description: 'Açıklama',
   image: 'Resim',
   images: 'Resimler',
+
 }

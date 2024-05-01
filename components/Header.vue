@@ -9,12 +9,13 @@
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
-              <span class="sr-only">{{ $t('openmenu') }}</span>
+              <span class="sr-only">{{ $t('menuclose') }}</span>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
             <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
               <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
               <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
+              <ColorModeSwitcherMenu />
             </div>
           </nav>
         </div>
@@ -39,6 +40,7 @@
               <div class="py-6 space-y-2">
                 <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
                 <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"/>
+                <ColorModeSwitcherMenu />
               </div>
             </div>
           </div>

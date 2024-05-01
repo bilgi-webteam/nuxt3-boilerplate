@@ -1,6 +1,21 @@
 export default {
+  // Global
   siteName: 'Webseitenname',
   globalDescription: 'Webseitenbeschreibung',
+
+  welcome: 'Willkommen',
+  loading: 'Laden...',
+  
+  dark: 'Dunkel',
+  light: 'Licht',
+  open: 'Öffnen',
+  close: 'Schließen',
+  menuopen: 'Menü öffnen',
+  menuclose: 'Menü schließen',
+  
+  alert: 'Alarm',
+
+  // Seiten
 
   index: 'Startseite',
   indexDescription: 'Beschreibung der Startseite',
@@ -18,24 +33,16 @@ export default {
   contactHeaderDescription: 'Kontaktseite Header Beschreibung',
 
   news: 'Nachrichten',
+  events: 'Veranstaltungen',
   newsDescription: 'Nachrichtenseitenbeschreibung',
   newsHeaderTitle: 'Nachrichten Seite Header Titel',
   newsHeaderDescription: 'Nachrichten Seite Header Beschreibung',
+  nonews: 'Keine Nachrichten gefunden',
   
   products: 'Produkte',
   productsDescription: 'Produktseitenbeschreibung',
   productsHeaderTitle: 'Produkte Seite Header Titel',
   productsHeaderDescription: 'Produkte Seite Header Beschreibung',
-  
-  welcome: 'Willkommen',
-  loading: 'Laden...',
-  nonews: 'Keine Nachrichten gefunden',
-  open: 'Öffnen',
-  close: 'Schließen',
-  menuopen: 'Menü öffnen',
-  menuclose: 'Menü schließen',
-  alert: 'Alarm',
-  events: 'Veranstaltungen',
   page: 'Seite',
   price: 'Preis',
   rating: 'Bewertung',
@@ -45,4 +52,5 @@ export default {
   description: 'Beschreibung',
   image: 'Bild',
   images: 'Bilder',
+
 }

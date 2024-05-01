@@ -1,6 +1,21 @@
 export default {
+  // Global
   siteName: 'Website Name',
   globalDescription: 'Website Description',
+
+  welcome: 'Welcome',
+  loading: 'Loading...',
+  
+  dark: 'Dark',
+  light: 'Light',
+  open: 'Open',
+  close: 'Close',
+  menuopen: 'Open Menu',
+  menuclose: 'Close Menu',
+  
+  alert: 'Alert',
+
+  // Pages
 
   index: 'Home',
   indexDescription: 'Home Page Description',
@@ -18,24 +33,16 @@ export default {
   contactHeaderDescription: 'Contact Page Header Description',
 
   news: 'News',
+  events: 'Events',
   newsDescription: 'News Page Description',
   newsHeaderTitle: 'News Page Header Title',
   newsHeaderDescription: 'News Page Header Description',
+  nonews: 'No News Found',
 
   products: 'Products',
   productsDescription: 'Products Page Description',
   productsHeaderTitle: 'Products Page Header Title',
   productsHeaderDescription: 'Products Page Header Description',
-
-  welcome: 'Welcome',
-  loading: 'Loading...',
-  nonews: 'No News Found',
-  open: 'Open',
-  close: 'Close',
-  menuopen: 'Open Menu',
-  menuclose: 'Close Menu',
-  alert: 'Alert',
-  events: 'Events',
   page: 'Page',
   price: 'Price',
   rating: 'Rating',
@@ -45,4 +52,5 @@ export default {
   description: 'Description',
   image: 'Image',
   images: 'Images',
+
 }
