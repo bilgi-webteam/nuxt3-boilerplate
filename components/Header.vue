@@ -2,17 +2,17 @@
   <div class="bg-slate-100 dark:bg-black [&_.router-link-active]:border-b-2 [&_.router-link-active]:border-green-500 mb-10">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
-        <div class="flex justify-between mx-8">
+        <div class="flex justify-between mx-4">
           <BilgiLogo />
           <ColorModeSwitcher />
         </div>
-        <div class="px-6 pt-6 lg:ml-0 lg:max-w-2xl lg:pl-8 lg:pr-0">
+        <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <span class="sr-only">Open main menu</span>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
-            <div class="hidden lg:ml-4 lg:flex lg:gap-x-14">
+            <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
               <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
               <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
             </div>
@@ -51,7 +51,7 @@
           <svg class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-black lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
-          <div class="relative px-6 py-32 sm:py-40 lg:px-4 lg:py-56 lg:pr-0">
+          <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
               <client-only>
               <h1 class="text-3xl font-bold tracking-tight text-black dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
