@@ -75,10 +75,14 @@ onMounted(fetchProducts);
     <div class="grid grid-cols-2 gap-4 mb-4">
       <div v-for="product in products" :key="product.id" class="p-4 bg-gray-200 dark:bg-gray-800">
         <div class="">
-          <h3 class="mb-4 text-xl">{{ product.title }}</h3>
+          <div class="md:min-h-12">
+            <h3 class="mb-4 text-xl font-bold">{{ product.title }}</h3>
+          </div>
           <img :src="product.thumbnail" alt="Product thumbnail" class="object-cover w-full h-auto mb-4 border border-gray-500 max-h-40">
-          <p class="mb-4">{{ product.description }}</p>
-          <div class="text-gray-500 dark:text-gray-200">
+          <div class="md:min-h-16">
+            <p class="mb-4 font-bold">{{ product.description }}</p>
+          </div>
+          <div class="text-gray-500 dark:text-gray-200 md:min-h-32">
             <div class="">{{$t('price')}}: ${{ product.price }} ({{ product.discountPercentage }}% off)</div>
             <div class="">{{$t('rating')}}: {{ product.rating }}</div>
             <div class="">{{$t('stock')}}: {{ product.stock }}</div>
