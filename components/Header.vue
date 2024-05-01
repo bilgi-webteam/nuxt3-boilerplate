@@ -35,8 +35,8 @@
           <div class="flow-root mt-6">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="py-6 space-y-2">
-                <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-black dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
-                <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-black dark:text-slate-100 hover:bg-gray-50s"/>
+                <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
+                <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"/>
               </div>
             </div>
           </div>
@@ -53,8 +53,10 @@
 
           <div class="relative px-6 py-32 sm:py-40 lg:px-4 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
+              <client-only>
               <h1 class="text-3xl font-bold tracking-tight text-black dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
               <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">{{ headerData.paragraph || ' ' }}</p>
+              </client-only>
             </div>
           </div>
           
@@ -66,24 +68,26 @@
       </div>
     </div>
   </div>
-
-
-
 </template>
 <script setup lang="ts">
-const { headerData } = useHeaderData();
+  const { headerData } = useHeaderData();
 
-import { ref } from 'vue'
-import { Dialog, DialogPanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import { ref } from 'vue'
+  import { Dialog, DialogPanel } from '@headlessui/vue'
+  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
-const navigation =  [
-  { name: 'index', to: '/' },
-  { name: 'about', to: 'about' },
-  { name: 'products', to: 'products' },
-  { name: 'news', to: 'news' },
-  { name: 'contact', to: 'contact' },
-]
+  const navigation =  [
+    { name: 'index', to: '/' },
+    { name: 'about', to: 'about' },
+    { name: 'products', to: 'products' },
+    { name: 'news', to: 'news' },
+    { name: 'contact', to: 'contact' },
+  ]
 
-const mobileMenuOpen = ref(false)
+  const mobileMenuOpen = ref(false)
 </script>
+<style>
+  .router-link-active {
+    @apply border-b-2 border-green-500;
+}
+</style>

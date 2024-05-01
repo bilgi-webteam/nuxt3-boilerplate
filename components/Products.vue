@@ -1,63 +1,3 @@
-<script setup lang="ts">
-import { ChevronLeftIcon } from '@heroicons/vue/20/solid'
-import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  images: string[];
-}
-
-const allProducts = ref<Product[]>([]);
-const products = computed(() => {
-  const start = (page.value - 1) * pageSize.value;
-  const end = start + pageSize.value;
-  return allProducts.value.slice(start, end);
-});
-const pending = ref(true);
-const page = ref(1);
-const pageSize = ref(10);
-const totalPages = computed(() => Math.ceil(allProducts.value.length / pageSize.value));
-
-async function fetchProducts() {
-  pending.value = true;
-  try {
-    const response = await fetch(`https://dummyjson.com/products`);
-    if (response.ok) {
-      const data = await response.json();
-      allProducts.value = data.products;
-    } else {
-      throw new Error('Failed to fetch products');
-    }
-  } catch (error) {
-    console.error('Error fetching products:', error);
-  } finally {
-    pending.value = false;
-  }
-}
-
-function nextPage() {
-  if (page.value < totalPages.value) {
-    page.value++;
-  }
-}
-
-function previousPage() {
-  if (page.value > 1) {
-    page.value--;
-  }
-}
-
-onMounted(fetchProducts);
-
-</script>
 <template>
   <div v-if="pending" class="p-4 mb-2 bg-gray-300 last:mb-0">
     {{ $t('loading') }}
@@ -76,7 +16,7 @@ onMounted(fetchProducts);
       <div v-for="product in products" :key="product.id" class="p-4 bg-gray-200 dark:bg-gray-800">
         <div class="">
           <div class="md:min-h-12">
-            <h3 class="mb-4 text-xl font-bold">{{ product.title }}</h3>
+            <h3 class="my-4 mb-4 text-xl font-bold">{{ product.title }}</h3>
           </div>
           <img :src="product.thumbnail" alt="Product thumbnail" class="object-cover w-full h-auto mb-4 border border-gray-500 max-h-40">
           <div class="md:min-h-16">
@@ -89,7 +29,7 @@ onMounted(fetchProducts);
             <div class="">{{$t('brand')}}: {{ product.brand }}</div>
             <div class="">{{$t('category')}}: {{ product.category }}</div>
           </div>
-          <h4 class="my-4 border-b-[1px] border-gray-300">{{$t('images')}}</h4>
+          <h4 class="border-b-[1px] text-lg font-bold my-2 border-gray-300">{{$t('images')}}</h4>
           <div class="grid grid-cols-6">
             <img v-for="image in product.images" :src="image" :alt="`${product.title} image`" :key="image" class="object-cover h-auto max-w-20 max-h-20">
           </div>
@@ -108,3 +48,62 @@ onMounted(fetchProducts);
   </div>
   
 </template>
+<script setup lang="ts">
+  import { ChevronLeftIcon } from '@heroicons/vue/20/solid'
+  import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+  interface Product {
+    id: number;
+    title: string;
+    description: string;
+    price: number;
+    discountPercentage: number;
+    rating: number;
+    stock: number;
+    brand: string;
+    category: string;
+    thumbnail: string;
+    images: string[];
+  }
+
+  const allProducts = ref<Product[]>([]);
+  const products = computed(() => {
+    const start = (page.value - 1) * pageSize.value;
+    const end = start + pageSize.value;
+    return allProducts.value.slice(start, end);
+  });
+  const pending = ref(true);
+  const page = ref(1);
+  const pageSize = ref(10);
+  const totalPages = computed(() => Math.ceil(allProducts.value.length / pageSize.value));
+
+  async function fetchProducts() {
+    pending.value = true;
+    try {
+      const response = await fetch(`https://dummyjson.com/products`);
+      if (response.ok) {
+        const data = await response.json();
+        allProducts.value = data.products;
+      } else {
+        throw new Error('Failed to fetch products');
+      }
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    } finally {
+      pending.value = false;
+    }
+  }
+
+  function nextPage() {
+    if (page.value < totalPages.value) {
+      page.value++;
+    }
+  }
+
+  function previousPage() {
+    if (page.value > 1) {
+      page.value--;
+    }
+  }
+
+  onMounted(fetchProducts);
+</script>

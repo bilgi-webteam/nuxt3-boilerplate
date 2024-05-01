@@ -11,7 +11,12 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Raleway: ['Raleway', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

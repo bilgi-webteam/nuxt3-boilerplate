@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen">
+  <div class="flex flex-col justify-between min-h-screen font-Raleway">
     <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <Header />
@@ -38,37 +38,18 @@
         type: 'image/png',
         href: '/favicon.png'
       }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'bg-slate-100 dark:bg-black text-black dark:text-slate-200'
+    },
   })
 </script>
 <style>
-  * {
-    font-family: 'Raleway', sans-serif;
-  }
-  body {
-    @apply bg-slate-100 dark:bg-black text-black dark:text-slate-200;
-  }
-  #header {
-    .router-link-active {
-      @apply border-b-2 border-green-500;
-    }
-  }
+
+  
+  
   #content {
-    h1 {
-      @apply text-3xl font-bold my-8;
-    }
-    h2 {
-      @apply text-2xl font-bold my-6;
-    } 
-    h3 {
-      @apply text-xl font-bold my-4;
-    }
-    h4 {
-      @apply text-lg font-bold my-2;
-    }
-    h5 {
-      @apply text-base font-bold my-1;
-    }
+
     p {
       @apply my-4;
     }
@@ -79,9 +60,5 @@
       }
     }
   }
-  #footer {
-    .router-link-active {
-      @apply border-b-2 border-blue-500;
-    }
-  }
+
 </style>
