@@ -1,5 +1,8 @@
 <template>  
-  <div class="bg-slate-100 dark:bg-black [&_.router-link-active]:border-b-2 [&_.router-link-active]:border-green-500 mb-10">
+  <div class="bg-slate-100 dark:bg-black mb-10
+  [&_.router-link-active]:border-green-500 
+  [&_.router-link-exact-active]:border-green-500 
+  ">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between mx-4">
@@ -10,11 +13,27 @@
           <!-- Desktop -->
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
-              <span class="sr-only">{{ $t('menuclose') }}</span>
+              <client-only>
+              <span class="sr-only">{{ $t('closemenu') }}</span>
+              </client-only>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
             <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
-              <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
+              <template v-for="menu in navigation" :key="menu.name">
+                <div class="relative group" v-if="menu.subItems">
+                  <NuxtLinkLocale :to=menu.to class="pb-1 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
+                    {{ $t(menu.name) }}
+                  </NuxtLinkLocale>
+                  <div class="absolute hidden pt-1 bg-white shadow-lg dark:bg-gray-700 min-w-max group-hover:block">
+                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to=subItem.to class="block px-3 py-2 text-sm text-black border-b-2 dark:text-white border-b-transparent">
+                      {{ $t(subItem.name) }}
+                    </NuxtLinkLocale>
+                  </div>
+                </div>
+                <NuxtLinkLocale v-else :to=menu.to class="text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
+                  {{ $t(menu.name) }}
+                </NuxtLinkLocale>
+              </template>
               <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
               <ColorModeSwitcherMenu />
             </div>
@@ -38,8 +57,21 @@
           </div>
           <div class="flow-root mt-6">
             <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="py-6 space-y-2">
-                <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"> {{ $t(menu.name) }}</NuxtLinkLocale>
+              <div class="py-6 space-y-2
+              [&_.router-link-active]:bg-gray-300 
+              [&_.router-link-exact-active]:bg-gray-300 
+              ">
+                <!-- Mobile Menu -->
+                <template v-for="menu in navigation" :key="menu.name">
+                  <NuxtLinkLocale :to="menu.to" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black dark:text-slate-100">
+                    {{ $t(menu.name) }}
+                  </NuxtLinkLocale>
+                  <template v-if="menu.subItems">
+                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="flex items-center px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black dark:text-slate-100">
+                     <MinusIcon class="size-8" /> {{ $t(subItem.name) }}
+                    </NuxtLinkLocale>
+                  </template>
+                </template>
                 <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg dark:text-slate-100 hover:bg-gray-50s"/>
                 <ColorModeSwitcherMenu />
               </div>
@@ -78,11 +110,15 @@
 
   import { ref } from 'vue'
   import { Dialog, DialogPanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import { Bars3Icon, XMarkIcon, MinusIcon } from '@heroicons/vue/24/outline'
 
   const navigation =  [
     { name: 'index', to: '/' },
-    { name: 'about', to: 'about' },
+    { name: 'about', to: 'about', 
+      subItems: [
+        { name: 'about_theteam', to: 'about_theteam' },
+        { name: 'about_company', to: 'about_company' }
+    ]},
     { name: 'products', to: 'products' },
     { name: 'news', to: 'news' },
     { name: 'contact', to: 'contact' },
@@ -90,5 +126,3 @@
 
   const mobileMenuOpen = ref(false)
 </script>
-
-// TODO: Add Submenu

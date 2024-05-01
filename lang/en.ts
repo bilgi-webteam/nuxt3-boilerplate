@@ -10,8 +10,8 @@ export default {
   light: 'Light',
   open: 'Open',
   close: 'Close',
-  menuopen: 'Open Menu',
-  menuclose: 'Close Menu',
+  openmenu: 'Open Menu',
+  closemenu: 'Close Menu',
   
   alert: 'Alert',
 

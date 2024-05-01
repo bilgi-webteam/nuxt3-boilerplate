@@ -10,8 +10,8 @@ export default {
   light: 'Açık',
   open: 'Aç',
   close: 'Kapat',
-  menuopen: 'Menüyü Aç',
-  menuclose: 'Menüyü Kapat',
+  openmenu: 'Menüyü Aç',
+  closemenu: 'Menüyü Kapat',
   
   alert: 'Uyarı',
 
