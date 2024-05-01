@@ -49,28 +49,27 @@ export default defineNuxtConfig({
     customRoutes: 'config',
     locales: [
       { code: 'en', iso: 'en-GB', name: 'English', file: 'en.ts'},
-      // { code: 'de', iso: 'de-DE', name: 'Deutsch', file: 'de.ts'},
       { code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr.ts'}
     ],
     pages: {
       about: {
         en: '/about',
-        de: '/uber-uns',
         tr: '/hakkimizda',
       },
+      // about_whoweare: {
+      //   en: '/about/whoweare',
+      //   tr: '/hakkimizda/kimiz',
+      // },
       contact: {
         en: '/contact',
-        de: '/kontakt',
         tr: '/iletisim',
       },
       news: {
         en: '/news',
-        de: '/nachrichten',
         tr: '/haberler',
       },
       products: {
         en: '/products',
-        de: '/produkte',
         tr: '/urunler',
       },
     },
