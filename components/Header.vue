@@ -7,6 +7,7 @@
           <ColorModeSwitcher />
         </div>
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
+          <!-- Desktop -->
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <span class="sr-only">{{ $t('menuclose') }}</span>
@@ -14,7 +15,6 @@
             </button>
             <div class="hidden md:pl-0 lg:flex lg:gap-x-6">
               <NuxtLinkLocale v-for="menu in navigation" :key="menu.name" :to=menu.to class="text-sm font-semibold leading-6 text-black dark:text-slate-100">{{ $t(menu.name) }}</NuxtLinkLocale>
-              
               <OtherLang class="text-sm font-semibold leading-6 text-black dark:text-slate-100" />
               <ColorModeSwitcherMenu />
             </div>
@@ -90,3 +90,5 @@
 
   const mobileMenuOpen = ref(false)
 </script>
+
+// TODO: Add Submenu
