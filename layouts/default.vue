@@ -3,7 +3,33 @@
     <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <Header />
-      <main>
+      <main 
+      class="
+        [&_p]:my-4 
+
+        [&_a]:px-1 
+        [&_a]:bg-black/70 
+        [&_a]:text-white 
+        [&_a]:dark:bg-white/80 
+        [&_a]:dark:text-black 
+        
+        [&_h2]:my-6 
+        [&_h2]:text-2xl 
+        [&_h2]:font-bold 
+        
+        [&_h3]:my-4 
+        [&_h3]:mb-4 
+        [&_h3]:text-xl 
+        [&_h3]:font-bold 
+        
+        [&_h4]:text-lg 
+        [&_h4]:font-bold 
+        [&_h4]:my-2 
+        
+        [&_h5]:my-1 
+        [&_h5]:text-base 
+        [&_h5]:font-bold"
+      >
         <NuxtPage />
       </main>
     </div>
@@ -44,21 +70,3 @@
     },
   })
 </script>
-<style>
-
-  
-  
-  #content {
-
-    p {
-      @apply my-4;
-    }
-    a {
-      @apply bg-black/50 text-white px-1 py-1 rounded-md;
-      &:hover {
-        @apply bg-black;
-      }
-    }
-  }
-
-</style>

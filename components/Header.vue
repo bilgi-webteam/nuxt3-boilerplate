@@ -1,5 +1,5 @@
 <template>  
-  <div class="bg-slate-100 dark:bg-black">
+  <div class="bg-slate-100 dark:bg-black [&_.router-link-active]:border-b-2 [&_.router-link-active]:border-green-500">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between mx-8">
@@ -45,14 +45,12 @@
         </DialogPanel>
       </Dialog>
     </header>
-
     <div class="relative">
       <div class="mx-auto max-w-7xl">
         <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
           <svg class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-black lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
-
           <div class="relative px-6 py-32 sm:py-40 lg:px-4 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
               <client-only>
@@ -61,9 +59,7 @@
               </client-only>
             </div>
           </div>
-          
         </div>
-        
       </div>
       <div class="bg-slate-100 dark:bg-black lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <client-only>
@@ -72,9 +68,6 @@
       </div>
     </div>
   </div>
-
-
-
 </template>
 <script setup lang="ts">
   const { headerData } = useHeaderData();
@@ -93,8 +86,3 @@
 
   const mobileMenuOpen = ref(false)
 </script>
-<style>
-  .router-link-active {
-    @apply border-b-2 border-green-500;
-}
-</style>

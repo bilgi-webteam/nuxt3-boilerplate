@@ -16,7 +16,7 @@
       <div v-for="product in products" :key="product.id" class="p-4 bg-gray-200 dark:bg-gray-800">
         <div class="">
           <div class="md:min-h-12">
-            <h3 class="my-4 mb-4 text-xl font-bold">{{ product.title }}</h3>
+            <h3>{{ product.title }}</h3>
           </div>
           <img :src="product.thumbnail" alt="Product thumbnail" class="object-cover w-full h-auto mb-4 border border-gray-500 max-h-40">
           <div class="md:min-h-16">
@@ -29,7 +29,7 @@
             <div class="">{{$t('brand')}}: {{ product.brand }}</div>
             <div class="">{{$t('category')}}: {{ product.category }}</div>
           </div>
-          <h4 class="border-b-[1px] text-lg font-bold my-2 border-gray-300">{{$t('images')}}</h4>
+          <h4 class="border-b-[1px] border-gray-300">{{$t('images')}}</h4>
           <div class="grid grid-cols-6">
             <img v-for="image in product.images" :src="image" :alt="`${product.title} image`" :key="image" class="object-cover h-auto max-w-20 max-h-20">
           </div>
