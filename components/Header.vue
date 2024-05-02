@@ -14,7 +14,7 @@
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <client-only>
-              <span class="sr-only">{{ $t('closemenu') }}</span>
+                <span class="sr-only">{{ $t('closemenu') }}</span>
               </client-only>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
@@ -22,17 +22,17 @@
               
               <template v-for="menu in navigation" :key="menu.name">
                 <div class="relative group" v-if="menu.subItems">
-                  <NuxtLinkLocale :to=menu.to class="px-1 py-1 text-sm font-semibold leading-6 text-black border-b-2 group-hover:bg-slate-300 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
+                  <NuxtLinkLocale :to="menu.to" class="px-1 py-1 text-sm font-semibold leading-6 text-black border-b-2 group-hover:bg-slate-300 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
                     {{ $t(menu.name) }}
                   </NuxtLinkLocale>
                   
-                  <div class="absolute hidden pt-1 pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-300 dark:bg-slate-700 min-w-max group-hover:block">
-                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to=subItem.to class="block py-2 pb-0 mx-4 text-sm text-black border-b-2 dark:text-white border-b-transparent">
+                  <div class="absolute hidden pt-1 pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-300 dark:bg-slate-700 min-w-max group-hover:block" style="min-width: 100%;">
+                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="block py-2 pb-0 mx-4 text-sm text-black border-b-2 dark:text-white border-b-transparent min-w-max">
                       {{ $t(subItem.name) }}
                     </NuxtLinkLocale>
                   </div>
                 </div>
-                <NuxtLinkLocale v-else :to=menu.to class="px-1 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
+                <NuxtLinkLocale v-else :to="menu.to" class="px-1 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
                   {{ $t(menu.name) }}
                 </NuxtLinkLocale>
               </template>
