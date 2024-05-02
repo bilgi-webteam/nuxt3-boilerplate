@@ -10,7 +10,7 @@
           <!-- <ColorModeSwitcher /> -->
         </div>
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
-          <!-- Desktop -->
+          <!-- Desktop Menu -->
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <client-only>
@@ -22,17 +22,17 @@
               
               <template v-for="menu in navigation" :key="menu.name">
                 <div class="relative group" v-if="menu.subItems">
-                  <NuxtLinkLocale :to="menu.to" class="px-1 py-1 text-sm font-semibold leading-6 text-black border-b-2 group-hover:bg-slate-300 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
+                  <NuxtLinkLocale :to="menu.to" class="px-3 py-1 text-sm font-semibold leading-6 text-black border-b-2 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
                     {{ $t(menu.name) }}
                   </NuxtLinkLocale>
                   
-                  <div class="absolute hidden pt-1 pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-300 dark:bg-slate-700 min-w-max group-hover:block" style="min-width: 100%;">
+                  <div class="absolute hidden pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-200 dark:bg-slate-700 min-w-max group-hover:block" style="min-width: 100%;">
                     <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="block py-2 pb-0 mx-4 text-sm text-black border-b-2 dark:text-white border-b-transparent min-w-max">
                       {{ $t(subItem.name) }}
                     </NuxtLinkLocale>
                   </div>
                 </div>
-                <NuxtLinkLocale v-else :to="menu.to" class="px-1 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
+                <NuxtLinkLocale v-else :to="menu.to" class="px-3 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
                   {{ $t(menu.name) }}
                 </NuxtLinkLocale>
               </template>
@@ -41,8 +41,10 @@
               <ColorModeSwitcherMenu />
             </div>
           </nav>
+          <!-- Desktop Menu End -->
         </div>
       </div>
+      <!-- Mobile Menu -->
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-50" />
         <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-black sm:max-w-sm sm:ring-1 sm:ring-black/10">
@@ -64,7 +66,6 @@
               [&_.router-link-active]:bg-gray-300 
               [&_.router-link-exact-active]:bg-gray-300 
               ">
-                <!-- Mobile Menu -->
                 <template v-for="menu in navigation" :key="menu.name">
                   <NuxtLinkLocale :to="menu.to" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black dark:text-slate-100">
                     {{ $t(menu.name) }}
@@ -82,6 +83,7 @@
           </div>
         </DialogPanel>
       </Dialog>
+      <!-- Mobile Menu End -->
     </header>
     <div class="relative">
       <div class="mx-auto max-w-7xl">
