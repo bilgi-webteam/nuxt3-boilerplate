@@ -24,7 +24,8 @@
                   <NuxtLinkLocale :to=menu.to class="pb-1 text-sm font-semibold leading-6 text-black border-b-2 dark:text-slate-100 border-b-transparent">
                     {{ $t(menu.name) }}
                   </NuxtLinkLocale>
-                  <div class="absolute hidden pt-1 bg-white shadow-lg dark:bg-gray-700 min-w-max group-hover:block">
+                  <div class="h-2"></div>
+                  <div class="absolute hidden pt-1 bg-white shadow-lg dark:bg-gray-700 min-w-max group-hover:block ">
                     <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to=subItem.to class="block px-3 py-2 text-sm text-black border-b-2 dark:text-white border-b-transparent">
                       {{ $t(subItem.name) }}
                     </NuxtLinkLocale>
@@ -68,7 +69,7 @@
                   </NuxtLinkLocale>
                   <template v-if="menu.subItems">
                     <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="flex items-center px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black dark:text-slate-100">
-                     <MinusIcon class="size-8" /> {{ $t(subItem.name) }}
+                    <MinusIcon class="size-8" /> {{ $t(subItem.name) }}
                     </NuxtLinkLocale>
                   </template>
                 </template>
