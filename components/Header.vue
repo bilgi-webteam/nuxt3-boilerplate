@@ -94,8 +94,8 @@
           <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-xl">
               <client-only>
-              <h1 class="text-3xl font-bold tracking-tight text-black dark:text-slate-100 sm:text-5xl">{{ headerData.title || ' ' }}</h1>
-              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">{{ headerData.paragraph || ' ' }}</p>
+              <h1 class="text-3xl font-bold tracking-tight text-black dark:text-slate-100 sm:text-5xl font-Libre text-balance">{{ headerData.title || ' ' }}</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100 text-balance">{{ headerData.paragraph || ' ' }}</p>
               </client-only>
             </div>
           </div>

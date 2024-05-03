@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ $t('welcome') }}</h2>
+  <h2 class="font-Libre">{{ $t('welcome') }}</h2>
   <component :is="currentContent"></component>
 </template>
 <script setup lang="ts">

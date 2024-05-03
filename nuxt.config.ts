@@ -86,12 +86,10 @@ export default defineNuxtConfig({
       // Roboto: true,
       // 'Josefin+Sans': true,
       // Lato: [100, 300],
-      Raleway: [400, 700],
-      Inter: '200..700',
-      // 'Crimson Pro': {
-      //   wght: '200..900',
-      //   ital: '200..700',
-      // }
+      // Raleway: [400, 700],
+      Raleway: '100..900',
+      'Libre+Baskerville': [400, 700],
+      // Inter: '200..700',
     }
   }
 })

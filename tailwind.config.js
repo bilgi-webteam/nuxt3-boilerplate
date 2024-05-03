@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Raleway: ['Raleway', 'sans-serif'],
-        Inter: ['Inter', 'sans-serif'],
+        Libre: ['Libre Baskerville', 'serif'],
       },
     },
   },
