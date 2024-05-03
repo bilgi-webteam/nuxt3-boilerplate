@@ -1,6 +1,6 @@
 <template>
   <component :is="currentContent"></component>
-  <Alert class="text-red-900 bg-red-200 dark:text-red-200 dark:bg-red-900">
+  <Alert class="text-red-900 bg-red-200 rounded-md dark:text-red-200 dark:bg-red-900">
     <p>{{ $t('alert') }}</p>
   </Alert>
 </template>

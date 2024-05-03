@@ -1,30 +1,34 @@
 <template>
   <div>
-    <div v-if="pending" class="p-4 mb-2 text-gray-800 bg-gray-300 dark:text-gray-200 dark:bg-gray-950 last:mb-0">{{ $t('loading') }}</div>
+    <div v-if="pending" class="py-4 mb-2 rounded-md text-slate-800 bg-slate-300 dark:bg-slate-700 dark:text-slate-200 last:mb-0">{{ $t('loading') }}</div>
 
     <div v-else-if="filteredNews.length || filteredEvents.length">
     
       <h3 v-if="filteredNews.length" class="mb-4 text-xl font-bold">{{ $t('news') }}</h3>
-      <NuxtLink v-for="item in filteredNews" :to="item.url" :key="item.id" class="flex flex-col gap-4 p-4 mb-2 text-gray-800 bg-gray-300 md:flex-row last:mb-0 dark:bg-gray-700 dark:text-gray-200" target="_blank">
-        <img v-if="item.image" :src="item.image" :alt="item.short_16words" class="w-auto mx-2 rounded-lg md:max-h-20">
-        <div class="mx-4 md:mx-0">
-          <p class="text-2xl">{{ item.title }}</p>
+      <NuxtLink v-for="item in filteredNews" :to="item.url" :key="item.id" class="flex flex-col gap-4 mb-2 rounded-md text-slate-800 bg-slate-300 md:flex-row last:mb-0 dark:bg-slate-700 dark:text-slate-200 hover:bg-slate-400 dark:hover:bg-slate-800" target="_blank">
+        <div v-if="item.image" class="object-cover overflow-hidden rounded-t-lg md:rounded-l-lg md:rounded-tr-none md:max-h-28 md:max-w-80">
+          <img :src="item.image" :alt="item.short_16words" class="w-auto">
+        </div>
+        <div class="mx-4 mt-4 md:mx-0">
+          <h3 class="text-2xl">{{ item.title }}</h3>
           <p>{{ item.short_16words }}</p>
         </div>
       </NuxtLink>
       
       <h3 v-if="filteredEvents.length" class="mt-8 mb-4 text-xl font-bold">{{ $t('events') }}</h3>
-      <NuxtLink v-for="item in filteredEvents" :to="item.url" :key="item.id" class="flex flex-col gap-4 p-4 mb-2 text-gray-800 bg-gray-400 md:flex-row last:mb-0 dark:bg-gray-900 dark:text-gray-200" target="_blank">
-        <img v-if="item.image" :src="item.image" :alt="item.short_16words" class="w-auto mx-2 rounded-lg md:max-h-20">
-        <div class="mx-4 md:mx-0">
-          <p class="text-2xl">{{ item.title }}</p>
+      <NuxtLink v-for="item in filteredEvents" :to="item.url" :key="item.id" class="flex flex-col gap-4 mb-2 rounded-md text-slate-800 bg-slate-400 md:flex-row last:mb-0 dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-500 dark:hover:bg-slate-900" target="_blank">
+        <div v-if="item.image" class="object-cover overflow-hidden rounded-t-lg md:rounded-l-lg md:rounded-tr-none md:max-h-28 md:max-w-80">
+          <img :src="item.image" :alt="item.short_16words" class="w-auto">
+        </div>
+        <div class="mx-4 mt-4 md:mx-0">
+          <h3 class="text-2xl">{{ item.title }}</h3>
           <p>{{ item.short_16words }}</p>
         </div>
       </NuxtLink>
       
     </div>
     
-    <div v-else class="p-4 mb-2 text-gray-800 bg-gray-300 dark:text-gray-200 dark:bg-gray-950 last:mb-0">{{ $t('nonews') }}</div>
+    <div v-else class="py-4 mb-2 rounded-md text-slate-800 bg-slate-300 dark:bg-slate-700 dark:text-slate-200 last:mb-0">{{ $t('nonews') }}</div>
   
   </div>
 </template>

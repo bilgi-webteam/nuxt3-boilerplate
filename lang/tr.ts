@@ -47,7 +47,7 @@ export default {
   newsDescription: 'Haberler Sayfası Açıklaması',
   newsHeaderTitle: 'Haberler Sayfası Üstalan Başlık',
   newsHeaderDescription: 'Haberler Sayfası Üstalan Açıklaması',
-  nonews: 'Haber Bulunamadi',
+  nonews: 'Haber Bulunamadı',
   
   products: 'Ürünler',
   productsDescription: 'Ürünler Sayfası Açıklaması',

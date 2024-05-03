@@ -5,13 +5,7 @@
       <Header />
       <main 
       class="
-        [&_p]:mb-4 
-
-        [&_a]:px-1 
-        [&_a]:bg-black/70 
-        [&_a]:text-white 
-        [&_a]:dark:bg-white/80 
-        [&_a]:dark:text-black 
+        [&_p]:mb-4
         
         [&_h2]:mb-6 
         [&_h2]:text-2xl 

@@ -1,7 +1,7 @@
 <template>
   <component :is="currentContent"></component>
-  <div class="p-4 mb-4">
-    <News />
+  <div class="my-12">
+    <BilgiNews />
   </div>
 </template>
 <script setup lang="ts">
