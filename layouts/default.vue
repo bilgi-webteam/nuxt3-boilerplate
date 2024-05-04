@@ -6,6 +6,7 @@
       <main 
       class="
         [&_p]:mb-4
+        [&_p]:text-pretty
         
         [&_h2]:mb-6 
         [&_h2]:text-2xl 
