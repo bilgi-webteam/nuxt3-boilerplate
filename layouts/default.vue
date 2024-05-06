@@ -7,9 +7,9 @@
       class="
         [&_a]:border-b-2 
         [&_a]:border-dotted
-        hover:[&_a]:border-solid
         [&_a]:border-malachite-500 
         [&_a]:dark:border-malachite-200 
+        hover:[&_a]:border-solid
         
         [&_p]:px-4
         
