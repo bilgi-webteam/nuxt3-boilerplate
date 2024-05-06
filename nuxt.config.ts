@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-const BASE_URL = 'test.bilgi.edu.tr'; // Change this to your domain
+const BASE_URL = 'test.bilgi.edu.tr';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -25,8 +25,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteurl: `https://${BASE_URL}`,
-      apiUrl: BASE_URL,
-      email: 'info@bilgi.edu.tr' // Change this to your email
+      BilgiNewsApiUrl: BASE_URL,
+      email: 'info@bilgi.edu.tr'
     }
   },
   $development: { 

@@ -40,7 +40,7 @@
   import type { NewsResult } from "@/types/types";
 
   const config = useRuntimeConfig();
-  const apiUrl = config.public.apiUrl;
+  const apiUrl = config.public.BilgiNewsApiUrl;
 
   const { pending, data: newsDataRef } = await useFetch<NewsResult>(`https://www.bilgi.edu.tr/api/news/?site=${apiUrl}`);
 
