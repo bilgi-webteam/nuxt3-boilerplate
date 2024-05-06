@@ -1,8 +1,14 @@
 # Nuxt 3 Boilerplate
 
-[Nuxt 3 docümantasyon](https://nuxt.com/docs/getting-started/introduction).
 
 ## Kurulum
+
+Komutun sonun alan adını (test.bilgi.edu.tr)ekleyerek repo'yu klonla, ve klasöre gir.
+
+```bash
+git clone https://github.com/bilgi-webteam/nuxt3-boilerplate.git test.bilgi.edu.tr
+cd test.bilgi.edu.tr
+```
 
 yarn ile paketleri kur.
 
@@ -16,7 +22,7 @@ yarn install
 ```bash
 yarn dev
 ```
-http://localhost:3000
+Tarayıcıda http://localhost:3000 adresini aç.
 
 
 ## Nuxt Config Ayarları
@@ -213,6 +219,3 @@ Bu komut sırasıyla;
 - `nuxt generate` ile yeni `dist` klasörünü oluşturur, 
 - Sunucudak  `dist` klasörünü siler,
 - Secure Copy `scp` ile lokalde yeni oluşan `dist` klasörünü sunucuya kopyalar. 
-
-
-

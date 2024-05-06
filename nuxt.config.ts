@@ -79,7 +79,7 @@ export default defineNuxtConfig({
     },
   },
   gtag: {
-    id: 'G-XXXXXXXXXX'
+    id: 'G-BGTG2XSDPD'
   },
   googleFonts: {
     families: {
