@@ -63,11 +63,11 @@
               <XMarkIcon class="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
-          <div class="flow-root mt-6">
+          <div class="flow-root mt-10">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="py-6 space-y-2
-              [&_.router-link-active]:bg-gray-300 
-              [&_.router-link-exact-active]:bg-gray-300 
+              [&_.router-link-active]:bg-malachite-300 
+              [&_.router-link-exact-active]:bg-malachite-300 
               dark:[&_.router-link-active]:text-slate-900 
               dark:[&_.router-link-exact-active]:text-slate-900 
               ">
@@ -81,8 +81,8 @@
                     </NuxtLinkLocale>
                   </template>
                 </template>
-                <OtherLang class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-slate-900 dark:text-slate-100 hover:bg-gray-50s"/>
-                <ColorModeSwitcherMenu />
+                <OtherLang class="block px-3 py-6 -mx-3 text-base font-semibold leading-7 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50"/>
+                <ColorModeSwitcherMenu class="pb-4 " />
               </div>
             </div>
           </div>

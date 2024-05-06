@@ -11,8 +11,6 @@
         [&_a]:dark:border-malachite-200 
         hover:[&_a]:border-solid
         
-        [&_p]:px-4
-        
         [&_p]:mb-4
         [&_p]:text-pretty
         

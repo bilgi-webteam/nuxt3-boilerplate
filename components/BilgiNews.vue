@@ -11,7 +11,7 @@
         </div>
         <div class="mx-4 mt-4 md:mx-0">
           <h3 class="text-2xl">{{ item.title }}</h3>
-          <p class="!pl-0">{{ item.short_16words }}</p>
+          <p>{{ item.short_16words }}</p>
         </div>
       </NuxtLink>
       
@@ -22,7 +22,7 @@
         </div>
         <div class="mx-4 mt-4 md:mx-0">
           <h3 class="text-2xl">{{ item.title }}</h3>
-          <p class="!pl-0">{{ item.short_16words }}</p>
+          <p>{{ item.short_16words }}</p>
         </div>
       </NuxtLink>
       
