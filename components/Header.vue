@@ -6,18 +6,21 @@
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between pt-6 pl-2 mx-4">
+          
           <BilgiLogo />
-          <!-- <ColorModeSwitcher /> -->
-        </div>
-        <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
-          <!-- Desktop Menu -->
-          <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
+          <button type="button" class=" rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <client-only>
                 <span class="sr-only">{{ $t('closemenu') }}</span>
               </client-only>
               <Bars3Icon class="w-6 h-6" aria-hidden="true" />
             </button>
+          <!-- <ColorModeSwitcher /> -->
+        </div>
+        <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
+          
+          <!-- Desktop Menu -->
+          <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
+            
             <div class="hidden md:pl-0 lg:flex lg:gap-x-3">
               
               <template v-for="menu in navigation" :key="menu.name">

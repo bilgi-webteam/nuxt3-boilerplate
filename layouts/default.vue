@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between min-h-svh font-Raleway">
+  <div class="flex flex-col justify-between min-h-svh font-Raleway bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200">
     <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <Header />
@@ -70,9 +70,6 @@
         type: 'image/png',
         href: '/favicon.png'
       }
-    ],
-    bodyAttrs: {
-      class: 'bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200'
-    },
+    ]
   })
 </script>
