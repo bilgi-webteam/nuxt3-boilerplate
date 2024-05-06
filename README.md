@@ -3,21 +3,20 @@
 
 ## Kurulum
 
-Komutun sonun alan adını (test.bilgi.edu.tr)ekleyerek repo'yu klonla, ve klasöre gir.
+Komutun sonun alan adını (test.bilgi.edu.tr) ekleyerek repo'yu klonla, ve klasöre gir.
 
 ```bash
 git clone https://github.com/bilgi-webteam/nuxt3-boilerplate.git test.bilgi.edu.tr
 cd test.bilgi.edu.tr
 ```
 
-yarn ile paketleri kur.
+**yarn** ile paketleri kur.
 
 ```bash
 yarn install
 ```
 
 ## Geliştirme
-
 
 ```bash
 yarn dev
@@ -198,7 +197,7 @@ Sayfa adı ile başlayıp büyük harfle dilin kodunu ekle.
 
 `package.json` 
 
-Sitenin sunucu IP ve klasör bilgilerini gir.
+Sitenin sunucu IP ve klasör bilgilerini (test.bilgi.edu.tr) gir.
 
 ```json
 "config": {
