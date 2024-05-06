@@ -5,7 +5,7 @@
   ">
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
-        <div class="flex justify-between mx-4">
+        <div class="flex justify-between pt-6 pl-2 mx-4">
           <BilgiLogo />
           <!-- <ColorModeSwitcher /> -->
         </div>
