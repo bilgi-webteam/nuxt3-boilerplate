@@ -3,6 +3,7 @@
 const BASE_URL = 'test.bilgi.edu.tr';
 
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/i18n', // https://i18n.nuxtjs.org/
