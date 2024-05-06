@@ -34,6 +34,12 @@ Site adresini gir.
 const BASE_URL = 'test.bilgi.edu.tr'; 
 ```
 
+Mail adresini gir. (`Footer.vue`'da kullanım örneği var)
+
+```ts
+email: 'info@bilgi.edu.tr'
+```
+
 Sayfaların adreslerini yaz.
 
 ```ts
