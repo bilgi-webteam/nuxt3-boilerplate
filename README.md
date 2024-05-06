@@ -202,6 +202,8 @@ Sayfa adı ile başlayıp büyük harfle dilin kodunu ekle.
 
 ## Sunucuya yükleme
 
+Sunucuda nginx ayarlarini [bu sayfa](https://www.notion.so/tarikkavaz/TBL-yeni-site-a-ma-cd39622843504cb8bfa40bef2f6af7ea)daki gibi yap
+
 `package.json` 
 
 Sitenin sunucu IP ve klasör bilgilerini (test.bilgi.edu.tr) gir.
@@ -230,4 +232,4 @@ Bu komut sırasıyla;
 
 ---
 
-[tarikkavaz.com](https://tarikkavaz.com) 
+© [tarikkavaz.com](https://tarikkavaz.com) 
