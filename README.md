@@ -88,7 +88,7 @@ fontFamily: {
 },
 ```
 
-varsa renkleri ekle
+Varsa ek renkleri ekle.
 
 ```js
 'malachite': {
@@ -174,7 +174,7 @@ Sayfanin dosya adını yaz.
 const pageName = 'about'; 
 ```
 
-Üst alan görselini seç
+Üst alan görselini seç.
 
 ```ts
 image: '/images/d.png',
@@ -190,6 +190,29 @@ Sayfa adı ile başlayıp büyük harfle dilin kodunu ekle.
 
 ## Sunucuya yükleme
 
+`package.json` 
+
+Sitenin sunucu IP ve klasör bilgilerini gir.
+
+```json
+"config": {
+    "server": "deployer@172.16.0.43",
+    "path": "/home/deployer/sites/test.bilgi.edu.tr/"
+  },
+```
+
+Yukarıdaki ayar yapıldıysa aşağıdaki komutu çalıştır.
+
 ```bash
 yarn deploy
 ```
+
+Bu komut sırasıyla;
+
+- Lokaldeki `dist` klasörünü siler,
+- `nuxt generate` ile yeni `dist` klasörünü oluşturur, 
+- Sunucudak  `dist` klasörünü siler,
+- Secure Copy `scp` ile lokalde yeni oluşan `dist` klasörünü sunucuya kopyalar. 
+
+
+

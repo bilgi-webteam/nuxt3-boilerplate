@@ -1,7 +1,11 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt3-boilerplate",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "config": {
+    "server": "deployer@172.16.0.43",
+    "path": "/home/deployer/sites/test.bilgi.edu.tr/"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --host",
