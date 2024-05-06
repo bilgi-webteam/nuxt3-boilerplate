@@ -5,6 +5,14 @@
       <Header />
       <main 
       class="
+        [&_a]:border-b-2 
+        [&_a]:border-dotted
+        hover:[&_a]:border-solid
+        [&_a]:border-malachite-500 
+        [&_a]:dark:border-malachite-200 
+        
+        [&_p]:px-4
+        
         [&_p]:mb-4
         [&_p]:text-pretty
         
@@ -64,7 +72,7 @@
       }
     ],
     bodyAttrs: {
-      class: 'bg-slate-100 dark:bg-black text-black dark:text-slate-200'
+      class: 'bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200'
     },
   })
 </script>

@@ -51,19 +51,6 @@
 <script setup lang="ts">
   import { ChevronLeftIcon } from '@heroicons/vue/20/solid'
   import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-  interface Product {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    discountPercentage: number;
-    rating: number;
-    stock: number;
-    brand: string;
-    category: string;
-    thumbnail: string;
-    images: string[];
-  }
 
   const allProducts = ref<Product[]>([]);
   const products = computed(() => {
