@@ -37,6 +37,7 @@
   import { ref, watch, computed } from 'vue';
   import { useI18n } from 'vue-i18n'; 
   import { useFetch, useRuntimeConfig } from 'nuxt/app';
+  import type { NewsResult } from "@/types/types";
 
   const config = useRuntimeConfig();
   const apiUrl = config.public.apiUrl;

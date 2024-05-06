@@ -51,6 +51,7 @@
 <script setup lang="ts">
   import { ChevronLeftIcon } from '@heroicons/vue/20/solid'
   import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+  import type { Product } from "@/types/types";
 
   const allProducts = ref<Product[]>([]);
   const products = computed(() => {
