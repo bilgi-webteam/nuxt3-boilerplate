@@ -65,6 +65,8 @@
               <div class="py-6 space-y-2
               [&_.router-link-active]:bg-gray-300 
               [&_.router-link-exact-active]:bg-gray-300 
+              dark:[&_.router-link-active]:text-slate-900 
+              dark:[&_.router-link-exact-active]:text-slate-900 
               ">
                 <template v-for="menu in navigation" :key="menu.name">
                   <NuxtLinkLocale :to="menu.to" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100">
