@@ -147,7 +147,8 @@ aboutHeaderDescription: 'Hakkımızda Sayfası Üstalan Açıklaması',
     [&_p]:text-pretty
 
     ...
-  ">
+  "
+>
 ```
 
 ## Üst alan (Header)
@@ -201,9 +202,9 @@ Sitenin sunucu IP ve klasör bilgilerini (test.bilgi.edu.tr) gir.
 
 ```json
 "config": {
-    "server": "deployer@172.16.0.43",
-    "path": "/home/deployer/sites/test.bilgi.edu.tr/"
-  },
+  "server": "deployer@172.16.0.43",
+  "path": "/home/deployer/sites/test.bilgi.edu.tr/"
+},
 ```
 
 Yukarıdaki ayar yapıldıysa aşağıdaki komutu çalıştır.
@@ -218,3 +219,9 @@ Bu komut sırasıyla;
 - `nuxt generate` ile yeni `dist` klasörünü oluşturur, 
 - Sunucudak  `dist` klasörünü siler,
 - Secure Copy `scp` ile lokalde yeni oluşan `dist` klasörünü sunucuya kopyalar. 
+
+
+
+---
+
+[tarikkavaz.com](https://tarikkavaz.com) 
