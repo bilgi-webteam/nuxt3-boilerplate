@@ -7,7 +7,7 @@
       <main>
         <div class="grid-cols-5 gap-4 md:grid">
           <div class="p-2">
-            <nav class="sticky flex items-center justify-between rounded-md shadow-md top-5 lg:justify-start bg-slate-100" aria-label="Global">
+            <nav class="sticky items-center justify-between hidden rounded-md shadow-md top-5 lg:justify-start md:flex bg-slate-100" aria-label="Global">
 
               <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
 

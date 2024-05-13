@@ -75,7 +75,7 @@
             viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
-          <div class="relative py-32 sm:py-40 lg:py-28 lg:pr-0">
+          <div class="relative py-20 lg:py-28 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-lg">
               <client-only>
                 <h1
