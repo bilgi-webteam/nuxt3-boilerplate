@@ -22,7 +22,7 @@
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-50" />
         <DialogPanel
-          class="fixed inset-y-0 right-0 z-[999] w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
+          class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
               <client-only>
@@ -75,7 +75,7 @@
             viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
-          <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
+          <div class="relative py-32 sm:py-40 lg:py-28 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-lg">
               <client-only>
                 <h1
