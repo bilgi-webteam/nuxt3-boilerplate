@@ -49,6 +49,11 @@ export default {
   newsHeaderDescription: 'News Page Header Description',
   nonews: 'No News Found',
 
+  test: 'Test',
+  testDescription: 'Test Page Description',
+  testHeaderTitle: 'Test Page Header Title',
+  testHeaderDescription: 'Test Page Header Description',
+
   products: 'Products',
   productsDescription: 'Products Page Description',
   productsHeaderTitle: 'Products Page Header Title',

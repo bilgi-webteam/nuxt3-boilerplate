@@ -48,6 +48,12 @@ export default {
   newsHeaderTitle: 'Haberler Sayfası Üstalan Başlık',
   newsHeaderDescription: 'Haberler Sayfası Üstalan Açıklaması',
   nonews: 'Haber Bulunamadı',
+
+    
+  test: 'Test',
+  testDescription: 'Test Sayfası Açıklaması',
+  testHeaderTitle: 'Test Sayfası Üstalan Başlık',
+  testHeaderDescription: 'Test Sayfası Üstalan Açıklaması',
   
   products: 'Ürünler',
   productsDescription: 'Ürünler Sayfası Açıklaması',

@@ -18,33 +18,7 @@
         </div>
         <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
           
-          <!-- Desktop Menu -->
-          <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
-            
-            <div class="hidden md:pl-0 lg:flex lg:gap-x-3">
-              
-              <template v-for="menu in navigation" :key="menu.name">
-                <div class="relative group" v-if="menu.subItems">
-                  <NuxtLinkLocale :to="menu.to" class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 text-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
-                    {{ $t(menu.name) }}
-                  </NuxtLinkLocale>
-                  
-                  <div class="absolute hidden pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-200 dark:bg-slate-700 min-w-max group-hover:block" style="min-width: 100%;">
-                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max">
-                      {{ $t(subItem.name) }}
-                    </NuxtLinkLocale>
-                  </div>
-                </div>
-                <NuxtLinkLocale v-else :to="menu.to" class="px-3 text-sm font-semibold leading-6 border-b-2 text-slate-900 dark:text-slate-100 border-b-transparent">
-                  {{ $t(menu.name) }}
-                </NuxtLinkLocale>
-              </template>
-              
-              <OtherLang class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100" />
-              <ColorModeSwitcherMenu />
-            </div>
-          </nav>
-          <!-- Desktop Menu End -->
+
         </div>
       </div>
       <!-- Mobile Menu -->
