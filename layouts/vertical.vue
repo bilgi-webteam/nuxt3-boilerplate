@@ -5,24 +5,22 @@
       <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
-        <div class="grid-cols-4 gap-4 md:grid">
-          <div>
-            <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
+        <div class="grid-cols-5 gap-4 md:grid">
+          <div class="p-2">
+            <nav class="sticky flex items-center justify-between rounded-md shadow-md top-5 lg:justify-start bg-slate-100" aria-label="Global">
 
-              <div class="hidden md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
+              <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
 
                 <template v-for="menu in navigation" :key="menu.name">
-                  <div class="relative py-2 group" v-if="menu.subItems">
+                  <div class="py-2 group" v-if="menu.subItems">
                     <NuxtLinkLocale :to="menu.to"
-                      class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 text-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent">
+                      class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 text-slate-900 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent">
                       {{ $t(menu.name) }}
                     </NuxtLinkLocale>
 
-                    <div
-                      class="absolute hidden pb-3 shadow-lg bg-slate-200 dark:bg-slate-700 min-w-max group-hover:block"
-                      style="min-width: 100%;">
+                    <div class="hidden pb-3 min-w-max group-hover:block">
                       <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                        class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max">
+                        class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-500 text-slate-900 dark:text-white border-b-transparent min-w-max">
                         {{ $t(subItem.name) }}
                       </NuxtLinkLocale>
                     </div>
@@ -39,7 +37,7 @@
             </nav>
           </div>
           <div class="
-            col-span-3
+            col-span-4
             [&_a]:border-b-2 
             [&_a]:border-dotted
             [&_a]:border-malachite-500 
@@ -79,6 +77,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import { ref } from 'vue'
 const { t, locale } = useI18n();
 const config = useRuntimeConfig();
 const route = useRoute();

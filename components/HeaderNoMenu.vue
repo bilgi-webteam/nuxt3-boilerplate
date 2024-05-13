@@ -1,4 +1,4 @@
-<template>  
+<template>
   <div class="bg-slate-100 dark:bg-slate-900 mb-10
   [&_.router-link-active]:border-malachite-500 
   [&_.router-link-exact-active]:border-malachite-500 
@@ -6,7 +6,7 @@
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between pt-6 pl-2 mx-4">
-          
+
           <BilgiLogo />
           <button type="button" class=" rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
             <client-only>
@@ -16,19 +16,17 @@
           </button>
           <!-- <ColorModeSwitcher /> -->
         </div>
-        <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
-          
 
-        </div>
       </div>
       <!-- Mobile Menu -->
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-50" />
-        <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
+        <DialogPanel
+          class="fixed inset-y-0 right-0 z-[999] w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
               <client-only>
-              <span class="sr-only">{{ headerData.title || ' ' }}</span>
+                <span class="sr-only">{{ headerData.title || ' ' }}</span>
               </client-only>
               <BilgiLogo />
             </a>
@@ -46,16 +44,21 @@
               dark:[&_.router-link-exact-active]:text-slate-900 
               ">
                 <template v-for="menu in navigation" :key="menu.name">
-                  <NuxtLinkLocale :to="menu.to" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100" @click="mobileMenuOpen = false">
+                  <NuxtLinkLocale :to="menu.to"
+                    class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
+                    @click="mobileMenuOpen = false">
                     {{ $t(menu.name) }}
                   </NuxtLinkLocale>
                   <template v-if="menu.subItems">
-                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to" class="flex items-center px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"  @click="mobileMenuOpen = false">
-                    <MinusIcon class="size-8" /> {{ $t(subItem.name) }}
+                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
+                      class="flex items-center px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
+                      @click="mobileMenuOpen = false">
+                      <MinusIcon class="size-8" /> {{ $t(subItem.name) }}
                     </NuxtLinkLocale>
                   </template>
                 </template>
-                <OtherLang class="block px-3 py-6 -mx-3 text-base font-semibold leading-7 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50"/>
+                <OtherLang
+                  class="block px-3 py-6 -mx-3 text-base font-semibold leading-7 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
                 <ColorModeSwitcherMenu class="pb-4 " />
               </div>
             </div>
@@ -67,31 +70,43 @@
     <div class="relative">
       <div class="mx-auto max-w-7xl">
         <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-          <svg class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-900 lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <svg
+            class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-900 lg:block"
+            viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="0,0 90,0 50,100 0,100" />
           </svg>
           <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
             <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-lg">
               <client-only>
-              <h1 class="text-5xl font-bold tracking-tight text-malachite-600 dark:text-malachite-300 font-Libre text-balance">{{ headerData.title || ' ' }}</h1>
-              <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100 text-balance">{{ headerData.paragraph || ' ' }}</p>
+                <h1
+                  class="text-5xl font-bold tracking-tight text-malachite-600 dark:text-malachite-300 font-Libre text-balance">
+                  {{ headerData.title || ' ' }}</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100 text-balance">{{ headerData.paragraph
+                  ||
+                  ' ' }}</p>
               </client-only>
             </div>
           </div>
         </div>
       </div>
-      <div class="relative bg-slate-100 dark:bg-slate-900 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:rounded-br-2xl">
+      <div
+        class="relative bg-slate-100 dark:bg-slate-900 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:rounded-br-2xl">
         <client-only>
-          <div class="absolute inset-0 opacity-20 dark:opacity-60 bg-malachite-400 dark:bg-malachite-950 bg-blend-darken md:rounded-br-2xl"></div>
-          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full md:rounded-br-2xl" :src="headerData.image || '/images/0.png'" alt="" />
+          <div
+            class="absolute inset-0 opacity-20 dark:opacity-60 bg-malachite-400 dark:bg-malachite-950 bg-blend-darken md:rounded-br-2xl">
+          </div>
+          <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full md:rounded-br-2xl"
+            :src="headerData.image || '/images/0.png'" alt="" />
         </client-only>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-  const { t } = useI18n();
-  const { headerData } = useHeaderData();
-  const mobileMenuOpen = ref(false);
-  import { navigation } from '@/utils/navigation.js';
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon, MinusIcon } from '@heroicons/vue/24/outline'
+const { t } = useI18n();
+const { headerData } = useHeaderData();
+const mobileMenuOpen = ref(false);
 </script>

@@ -1,7 +1,3 @@
-import { ref } from 'vue'
-import { Dialog, DialogPanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon, MinusIcon } from '@heroicons/vue/24/outline'
-
 export const navigation =  [
   { name: 'index', to: '/' },
   { name: 'about', to: 'about', 
