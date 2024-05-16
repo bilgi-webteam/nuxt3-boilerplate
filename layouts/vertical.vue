@@ -14,25 +14,25 @@
                 <template v-for="menu in navigation" :key="menu.name">
                   <div class="py-2 group" v-if="menu.subItems">
                     <NuxtLinkLocale :to="menu.to"
-                      class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 text-slate-900 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent">
-                      {{ $t(menu.name) }}
+                      class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 cursor-pointer text-slate-900 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent">
+                      {{ $t(menu.name) }} <!-- menu item with submenu -->
                     </NuxtLinkLocale>
 
                     <div class="hidden pb-3 min-w-max group-hover:block">
                       <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                        class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-500 text-slate-900 dark:text-white border-b-transparent min-w-max">
-                        {{ $t(subItem.name) }}
+                        class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-300 text-slate-900 dark:text-white border-b-transparent min-w-max">
+                        {{ $t(subItem.name) }} <!-- submenu item -->
                       </NuxtLinkLocale>
                     </div>
                   </div>
                   <NuxtLinkLocale v-else :to="menu.to"
                     class="px-3 py-2 text-sm font-semibold leading-6 border-b-2 first:pt-0 text-slate-900 dark:text-slate-100 border-b-transparent">
-                    {{ $t(menu.name) }}
+                    {{ $t(menu.name) }} <!-- menu item -->
                   </NuxtLinkLocale>
                 </template>
 
-                <OtherLang class="py-2 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100" />
-                <ColorModeSwitcherMenu class="py-2" />
+                <OtherLang class="py-2 ml-2 text-sm font-semibold leading-6 border-none text-slate-900 dark:text-slate-100" />
+                <ColorModeSwitcherMenu class="py-2 ml-2" />
               </div>
             </nav>
           </div>

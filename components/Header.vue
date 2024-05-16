@@ -45,8 +45,8 @@
                 </NuxtLinkLocale>
               </template>
 
-              <OtherLang class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100" />
-              <ColorModeSwitcherMenu />
+              <OtherLang class="text-sm font-semibold leading-6 border-gray-400 text-slate-900 dark:text-slate-100 md:pl-4 md:border-l-2" />
+              <ColorModeSwitcherMenu class="border-gray-400 md:pl-4 md:border-l-2" />
             </div>
           </nav>
           <!-- Desktop Menu End -->

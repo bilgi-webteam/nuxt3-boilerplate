@@ -1,7 +1,7 @@
 <template>
   <!-- <pre>{{ $colorMode.value }}</pre> -->
   <div>
-    <button aria-label="Color Mode" class="flex items-center gap-1 border-gray-400 md:pl-4 md:border-l-2"
+    <button aria-label="Color Mode" class="flex items-center gap-1"
     @click="changeColor">
       <ColorScheme>
           <SunIcon v-if="colorMode.value === 'dark'" class="text-white size-4" />
