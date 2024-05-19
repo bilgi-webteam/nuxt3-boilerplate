@@ -28,21 +28,23 @@
                   <NuxtLinkLocale :to="menu.to"
                     class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 text-slate-900 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent rounded-t-md">
                     {{ $t(menu.name) }}
-                  </NuxtLinkLocale>
+                  </NuxtLinkLocale> <!-- menu item with submenu -->
 
                   <div
-                    class="absolute hidden pb-3 rounded-md rounded-tl-none shadow-lg bg-slate-200 dark:bg-slate-700 min-w-max group-hover:block"
-                    style="min-width: 100%;">
-                    <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                      class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max">
-                      {{ $t(subItem.name) }}
-                    </NuxtLinkLocale>
+                    class="absolute grid min-w-full pb-3 transition-all ease-in-out rounded-tl-none group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full "
+                    >
+                    <div class="overflow-hidden shadow-md min-w-max bg-slate-200 dark:bg-slate-700">
+                      <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
+                        class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max">
+                        {{ $t(subItem.name) }}
+                      </NuxtLinkLocale>
+                    </div> <!-- submenu item -->
                   </div>
                 </div>
                 <NuxtLinkLocale v-else :to="menu.to"
                   class="px-3 text-sm font-semibold leading-6 border-b-2 text-slate-900 dark:text-slate-100 border-b-transparent">
                   {{ $t(menu.name) }}
-                </NuxtLinkLocale>
+                </NuxtLinkLocale> <!-- menu item -->
               </template>
 
               <OtherLang class="text-sm font-semibold leading-6 border-gray-400 text-slate-900 dark:text-slate-100 md:pl-4 md:border-l-2" />
