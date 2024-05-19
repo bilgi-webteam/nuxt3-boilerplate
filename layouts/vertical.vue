@@ -18,11 +18,13 @@
                       {{ $t(menu.name) }} <!-- menu item with submenu -->
                     </NuxtLinkLocale>
 
-                    <div class="hidden pb-3 min-w-max group-hover:block">
-                      <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                        class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-300 text-slate-900 dark:text-white border-b-transparent min-w-max">
-                        {{ $t(subItem.name) }} <!-- submenu item -->
-                      </NuxtLinkLocale>
+                    <div class="grid transition-all ease-in-out delay-200 grid-rows-0 min-w-max group-hover:grid-rows-full">
+                      <div class="overflow-hidden">
+                        <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
+                          class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-300 text-slate-900 dark:text-white border-b-transparent min-w-max">
+                          {{ $t(subItem.name) }} <!-- submenu item -->
+                        </NuxtLinkLocale>
+                      </div>
                     </div>
                   </div>
                   <NuxtLinkLocale v-else :to="menu.to"

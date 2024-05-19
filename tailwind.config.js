@@ -16,6 +16,10 @@ module.exports = {
         Raleway: ['Raleway', 'sans-serif'],
         Libre: ['Libre Baskerville', 'serif'],
       },
+      gridTemplateRows: {
+        "0": "0fr",
+        "full": "1fr",
+      },
       'colors': {
         'malachite': {
           '50': '#f0fdf4',
