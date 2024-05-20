@@ -1,13 +1,16 @@
 <template>
   <div
-    class="flex flex-col justify-between min-h-svh font-Raleway bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200">
+    class="flex flex-col justify-between min-h-svh font-Raleway bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200 
+  [&_.router-link-active]:border-b-malachite-500 
+  [&_.router-link-exact-active]:border-b-malachite-500 
+  ">
     <div class="max-w-screen-xl p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
         <div class="grid-cols-5 gap-4 md:grid">
           <div class="p-2">
-            <nav class="sticky items-center justify-between hidden rounded-md shadow-md top-5 lg:justify-start md:flex bg-slate-100" aria-label="Global">
+            <nav class="sticky items-center justify-between hidden rounded-md shadow-md top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900" aria-label="Global">
 
               <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
 

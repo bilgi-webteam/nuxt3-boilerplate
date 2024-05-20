@@ -5,6 +5,9 @@
   </Alert>
 </template>
 <script setup lang="ts">
+definePageMeta({
+  layout: 'vertical'
+})
 const pageName = 'about_company';
 const { t } = useI18n();
 const { headerData } = useHeaderData();

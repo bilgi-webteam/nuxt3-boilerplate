@@ -31,11 +31,11 @@
                   </NuxtLinkLocale> <!-- menu item with submenu -->
 
                   <div
-                    class="absolute grid min-w-full pb-3 transition-all ease-in-out rounded-tl-none group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full "
+                    class="absolute grid min-w-full pb-3 transition-all ease-in-out rounded-tl-none group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full"
                     >
-                    <div class="overflow-hidden shadow-md min-w-max bg-slate-200 dark:bg-slate-700">
+                    <div class="overflow-hidden rounded-b-lg shadow-md min-w-max bg-slate-200 dark:bg-slate-700">
                       <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                        class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max">
+                        class="block py-2 pb-0 mx-4 text-sm border-b-2 text-slate-900 dark:text-white border-b-transparent min-w-max last:mb-3">
                         {{ $t(subItem.name) }}
                       </NuxtLinkLocale>
                     </div> <!-- submenu item -->
