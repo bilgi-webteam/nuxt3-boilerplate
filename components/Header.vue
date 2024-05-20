@@ -16,8 +16,8 @@
           </button>
           <!-- <ColorModeSwitcher /> -->
         </div>
-        <div class="px-4 pt-6 lg:max-w-2xl lg:pr-0">
-
+        <div class="relative px-4 pt-6 lg:max-w-2xl lg:pr-0">
+          
           <!-- Desktop Menu -->
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
 
@@ -47,8 +47,7 @@
                 </NuxtLinkLocale> <!-- menu item -->
               </template>
 
-              <OtherLang class="text-sm font-semibold leading-6 border-gray-400 text-slate-900 dark:text-slate-100 md:pl-4 md:border-l-2" />
-              <ColorModeSwitcherMenu class="border-gray-400 md:pl-4 md:border-l-2" />
+              
             </div>
           </nav>
           <!-- Desktop Menu End -->
@@ -104,7 +103,11 @@
       <!-- Mobile Menu End -->
     </header>
     <div class="relative">
-      <div class="mx-auto max-w-7xl">
+      <div class="absolute right-0 z-50 p-4 dark:bg-slate-900 bg-slate-100 rounded-bl-md">
+        <OtherLang class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 md:pl-4" />
+        <ColorModeSwitcherMenu class=" md:pl-4" />
+      </div>
+      <div class="mx-auto max-w-7xl"> 
         <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
           <svg
             class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-900 lg:block"

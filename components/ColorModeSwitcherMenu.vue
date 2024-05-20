@@ -6,7 +6,7 @@
       <ColorScheme>
           <SunIcon v-if="colorMode.value === 'dark'" class="text-white size-4" />
           <MoonIcon v-else class="size-4" />
-          <div class="text-sm font-semibold leading-6 text-gray-500 dark:text-slate-300">
+          <div class="text-sm font-semibold leading-6 ">
             <span v-if="colorMode.value === 'dark'">{{ $t('light') }}</span>
             <span v-else>{{ $t('dark') }}</span>
           </div>

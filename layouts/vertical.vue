@@ -13,7 +13,6 @@
             <nav class="sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900" aria-label="Global">
 
               <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
-
                 <template v-for="menu in navigation" :key="menu.name">
                   <div class="py-2 group" v-if="menu.subItems">
                     <NuxtLinkLocale :to="menu.to"
@@ -36,8 +35,6 @@
                   </NuxtLinkLocale>
                 </template>
 
-                <OtherLang class="py-2 ml-2 text-sm font-semibold leading-6 border-none text-slate-900 dark:text-slate-100" />
-                <ColorModeSwitcherMenu class="py-2 ml-2" />
               </div>
             </nav>
           </div>
