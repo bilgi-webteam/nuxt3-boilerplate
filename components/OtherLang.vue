@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="flex items-center gap-1 ">
+    <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)" class="flex items-center gap-1">
       <GlobeAltIcon class="size-4" />{{ locale.name }}
     </NuxtLink>
   </div>
