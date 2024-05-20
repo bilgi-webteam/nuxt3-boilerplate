@@ -7,7 +7,7 @@
       <div class="mx-auto max-w-7xl">
         <div class="flex justify-between pt-6 pl-2 mx-4">
 
-          <BilgiLogo />
+          <BilgiLogo :imgClass="'h-16 pt-4 md:h-24'" />
           <button type="button" class=" rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
             <client-only>
               <span class="sr-only">{{ $t('closemenu') }}</span>
@@ -64,7 +64,7 @@
               <client-only>
                 <span class="sr-only">{{ headerData.title || ' ' }}</span>
               </client-only>
-              <BilgiLogo />
+              <BilgiLogo :imgClass="'h-16 pt-4 md:h-24'" />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">{{ $t('closemenu') }}</span>
@@ -146,4 +146,5 @@ const { t } = useI18n();
 const { headerData } = useHeaderData();
 const mobileMenuOpen = ref(false);
 import { navigation } from '@/utils/navigation.js';
+
 </script>
