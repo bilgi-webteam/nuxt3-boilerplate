@@ -58,7 +58,7 @@
                   </template>
                 </template>
                 <OtherLang
-                  class="block px-3 py-6 -mx-3 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
+                  class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
                 <ColorModeSwitcherMenu class="pb-4" />
               </div>
             </div>
@@ -69,7 +69,7 @@
     </header>
     <div class="relative">
       <div class="absolute right-0 z-50 hidden p-4 md:block dark:bg-slate-900 bg-slate-100 rounded-bl-md">
-        <OtherLang class="text-slate-900 dark:text-slate-100 md:pl-4" />
+        <OtherLang class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 md:pl-4" />
         <ColorModeSwitcherMenu class=" md:pl-4" />
       </div>
       <div class="mx-auto max-w-7xl">
