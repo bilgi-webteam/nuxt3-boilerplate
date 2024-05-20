@@ -9,8 +9,8 @@
       <HeaderNoMenu />
       <main>
         <div class="grid-cols-5 gap-4 md:grid">
-          <div class="p-2">
-            <nav class="sticky items-center justify-between hidden rounded-md shadow-md top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900" aria-label="Global">
+          <div class="px-2">
+            <nav class="sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900" aria-label="Global">
 
               <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
 
