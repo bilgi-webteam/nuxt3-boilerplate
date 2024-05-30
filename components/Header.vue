@@ -48,8 +48,8 @@
               </template>
 
               
+              <div class="ml-10"><ModeToggle /></div>
             </div>
-            <div class="ml-10"><ModeToggle /></div>
           </nav>
           <!-- Desktop Menu End -->
         </div>
@@ -93,9 +93,12 @@
                     </NuxtLinkLocale>
                   </template>
                 </template>
-                <OtherLang
-                  class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
-                <ColorModeSwitcherMenu class="pb-4" />
+                <div class="relative flex justify-between pt-5 align-middle border-t-2 border-slate-700">
+                  <OtherLang
+                    class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
+                  <!-- <ColorModeSwitcherMenu class="pb-4" /> -->
+                  <ModeToggle />
+                </div>
               </div>
             </div>
           </div>
