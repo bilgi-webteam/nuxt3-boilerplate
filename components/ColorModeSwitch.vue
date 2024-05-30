@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-4">
+  <div class="flex items-center gap-4 mt-1">
     <!-- Icon Toggle -->
     <Switch v-model="isDarkMode" :class="[isDarkMode ? 'bg-malachite-600' : 'bg-gray-400', 'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-malachite-600 focus:ring-offset-2']" @click="toggleColorMode">
       <span class="sr-only">Toggle Dark Mode</span>

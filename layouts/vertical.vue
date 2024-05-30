@@ -10,33 +10,15 @@
       <main>
         <div class="grid-cols-5 gap-4 md:grid">
           <div class="px-2">
-            <nav class="sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900" aria-label="Global">
+            
+            <!-- Desktop Menu -->
+            <div>
+              <MenuDesktop :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900'" 
+              :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'" />
+              <div class="mt-10"><ColorModeSwitch /></div>
+            </div>
+            <!-- Desktop Menu End -->
 
-              <div class="md:pl-0 lg:flex lg:flex-col lg:gap-x-3">
-                <template v-for="menu in navigation" :key="menu.name">
-                  <div class="py-2 group" v-if="menu.subItems">
-                    <NuxtLinkLocale :to="menu.to"
-                      class="px-3 py-1 text-sm font-semibold leading-6 border-b-2 cursor-pointer text-slate-900 dark:group-hover:bg-slate-700 dark:text-slate-100 border-b-transparent">
-                      {{ $t(menu.name) }} <!-- menu item with submenu -->
-                    </NuxtLinkLocale>
-
-                    <div class="grid transition-all ease-in-out delay-200 grid-rows-0 min-w-max group-hover:grid-rows-full">
-                      <div class="overflow-hidden">
-                        <NuxtLinkLocale v-for="subItem in menu.subItems" :key="subItem.name" :to="subItem.to"
-                          class="block py-2 pl-2 mx-4 text-sm border-b-2 border-l-2 border-l-gray-300 text-slate-900 dark:text-white border-b-transparent min-w-max">
-                          {{ $t(subItem.name) }} <!-- submenu item -->
-                        </NuxtLinkLocale>
-                      </div>
-                    </div>
-                  </div>
-                  <NuxtLinkLocale v-else :to="menu.to"
-                    class="px-3 py-2 text-sm font-semibold leading-6 border-b-2 first:pt-0 text-slate-900 dark:text-slate-100 border-b-transparent">
-                    {{ $t(menu.name) }} <!-- menu item -->
-                  </NuxtLinkLocale>
-                </template>
-                <div class="mt-10"><ModeToggle /></div>
-              </div>
-            </nav>
           </div>
           <div class="
             col-span-4
@@ -79,15 +61,11 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
 const { t, locale } = useI18n();
 const config = useRuntimeConfig();
 const route = useRoute();
 const siteurl = config.public.siteurl;
 const currentFullUrl = computed(() => `${siteurl}${route.path}`);
-
-const { headerData } = useHeaderData();
-const mobileMenuOpen = ref(false);
 
 import { navigation } from '@/utils/navigation.js';
 
