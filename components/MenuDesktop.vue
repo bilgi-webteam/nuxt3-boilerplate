@@ -22,11 +22,11 @@
         </NuxtLinkLocale>
       </template>
     </div>
+    <div :class="ColorModeClass"><ColorModeSwitch /></div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { navigation } from '@/utils/navigation.js';
 
@@ -37,6 +37,10 @@ const props = defineProps({
     default: ''
   },
   menuContainerClass: {
+    type: String,
+    default: ''
+  },
+  ColorModeClass: {
     type: String,
     default: ''
   }

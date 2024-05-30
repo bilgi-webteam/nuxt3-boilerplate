@@ -13,9 +13,8 @@
             
             <!-- Desktop Menu -->
             <div>
-              <MenuDesktop :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:flex bg-slate-100 dark:bg-slate-900'" 
-              :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'" />
-              <div class="mt-10"><ColorModeSwitch /></div>
+              <MenuDesktop :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'" 
+              :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'" :ColorModeClass="'mt-10'" />
             </div>
             <!-- Desktop Menu End -->
 
@@ -66,8 +65,6 @@ const config = useRuntimeConfig();
 const route = useRoute();
 const siteurl = config.public.siteurl;
 const currentFullUrl = computed(() => `${siteurl}${route.path}`);
-
-import { navigation } from '@/utils/navigation.js';
 
 // Watch the currentFullUrl to update SEO metadata when it changes
 watchEffect(() => {

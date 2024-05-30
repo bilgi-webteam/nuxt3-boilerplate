@@ -19,8 +19,7 @@
           
           <!-- Desktop Menu -->
           <div class="flex align-middle ">
-            <MenuDesktop :menuClass="'flex justify-between lg:justify-start'" :menuContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'" />
-            <div class="ml-6"><ColorModeSwitch /></div>
+            <MenuDesktop :menuClass="'flex justify-between lg:justify-start'" :menuContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'" :ColorModeClass="'ml-6'" />
           </div>
           <!-- Desktop Menu End -->
           
