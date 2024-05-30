@@ -34,7 +34,7 @@
                     {{ $t(menu.name) }} <!-- menu item -->
                   </NuxtLinkLocale>
                 </template>
-
+                <div class="mt-10"><ModeToggle /></div>
               </div>
             </nav>
           </div>

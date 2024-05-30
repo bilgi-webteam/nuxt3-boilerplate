@@ -22,7 +22,7 @@
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-50" />
         <DialogPanel
-          class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
+          class="fixed inset-y-0 right-0 z-[999] w-full px-6 py-6 overflow-y-auto bg-slate-100 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
           <div class="flex items-center justify-between">
             <a href="/" class="-m-1.5 p-1.5">
               <client-only>
@@ -57,9 +57,12 @@
                     </NuxtLinkLocale>
                   </template>
                 </template>
-                <OtherLang
-                  class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 border-t-2 border-malachite-400 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
-                <ColorModeSwitcherMenu class="pb-4" />
+                <div class="relative flex justify-between pt-5 align-middle border-t-2 border-slate-700">
+                  <OtherLang
+                    class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
+                  <!-- <ColorModeSwitcherMenu class="pb-4" /> -->
+                  <ModeToggle />
+                </div>
               </div>
             </div>
           </div>
@@ -70,7 +73,7 @@
     <div class="relative">
       <div class="absolute right-0 z-50 hidden p-4 md:block dark:bg-slate-900 bg-slate-100 rounded-bl-md">
         <OtherLang class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 md:pl-4" />
-        <ColorModeSwitcherMenu class=" md:pl-4" />
+        <!-- <ColorModeSwitcherMenu class=" md:pl-4" /> -->
       </div>
       <div class="mx-auto max-w-7xl">
         <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
