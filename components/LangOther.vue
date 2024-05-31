@@ -16,6 +16,3 @@
     set: (value) => setLocale(value)
   })
 </script>
-<style scoped>
-
-</style>

@@ -1,4 +1,20 @@
-// components/BilgiNews.vue
+// types/types.ts
+export interface MenuProps {
+  menuClass: string;
+  menuContainerClass: string;
+  ColorModeClass: string;
+}
+
+export interface MobileMenuProps {
+  mobileMenuOpen: boolean;
+  headerData: Record<string, any>;
+  navigation: Array<any>;
+}
+
+export interface AlertProps {
+  class?: string;
+}
+
 export interface NewsItem {
   id: string;
   title: string;
@@ -11,8 +27,6 @@ export interface NewsResult {
   results: NewsItem[];
 }
 
-
-// components/Products.vue
 export interface Product {
   id: number;
   title: string;

@@ -29,20 +29,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { navigation } from '@/utils/navigation.js';
-
+import type { MenuProps } from "@/types/types";
 const { t } = useI18n();
-const props = defineProps({
-  menuClass: {
-    type: String,
-    default: ''
-  },
-  menuContainerClass: {
-    type: String,
-    default: ''
-  },
-  ColorModeClass: {
-    type: String,
-    default: ''
-  }
-});
+const props = defineProps<MenuProps>();
 </script>
