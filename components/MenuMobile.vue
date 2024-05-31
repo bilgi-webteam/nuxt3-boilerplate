@@ -38,9 +38,9 @@
               </template>
             </template>
             <div class="relative flex justify-between pt-5 align-middle border-t-2 border-slate-700">
-              <OtherLang
+              <LangOther
                 class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 hover:bg-gray-50" />
-              <ColorModeToggle />
+              <ColorModeSwitch />
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@
         </NuxtLinkLocale>
       </template>
     </div>
-    <div :class="ColorModeClass"><ColorModeSwitch /></div>
+    <div :class="ColorModeClass" class="hidden sm:block"><ColorModeSwitch /></div>
   </nav>
 </template>
 
