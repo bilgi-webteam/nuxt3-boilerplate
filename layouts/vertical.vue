@@ -4,11 +4,11 @@
   [&_.router-link-active]:border-b-malachite-500 
   [&_.router-link-exact-active]:border-b-malachite-500 
   ">
-    <div class="max-w-screen-xl p-4 pt-0 mx-auto">
+    <div class="max-w-screen-xl min-w-full p-4 pt-0 mx-auto">
       <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
-        <div class="grid-cols-5 gap-4 md:grid">
+        <div class="grid-cols-5 gap-4 mx-auto max-w-7xl md:grid">
           <div class="px-2">
             
             <!-- Desktop Menu -->

@@ -4,13 +4,8 @@
   </client-only>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
+import type { Logo } from '@/types/types';
 const colorMode = useColorMode()
 const oppositeColorMode = computed(() => colorMode.value === 'dark' ? 'light' : 'dark')
-const props = defineProps({
-  class: {
-    type: String,
-    default: ''
-  }
-})
+const props = defineProps<Logo>();
 </script>

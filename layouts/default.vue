@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-between min-h-svh font-Raleway bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200">
-    <div class="max-w-screen-xl p-4 pt-0 mx-auto">
+    <div class="max-w-screen-xl min-w-full p-4 pt-0 mx-auto w-scree">
       <NuxtLoadingIndicator />
       <Header />
       <main 
@@ -34,7 +34,7 @@
         [&_h5]:font-bold
         [&_h5]:font-Libre
       ">
-        <NuxtPage />
+        <div class="max-w-screen-xl mx-auto"><NuxtPage /></div>
       </main>
     </div>
     <Footer />

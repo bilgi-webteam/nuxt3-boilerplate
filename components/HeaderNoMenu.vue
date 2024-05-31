@@ -2,9 +2,10 @@
   <div class="bg-slate-100 dark:bg-slate-900 mb-10
   [&_.router-link-active]:border-malachite-500 
   [&_.router-link-exact-active]:border-malachite-500 
+  max-w-screen-xl mx-auto
   ">
     <header class="absolute inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-7xl">
+      <div class="max-w-screen-xl mx-auto">
         <div class="flex justify-between pt-6 pl-2 mx-4">
           <Logo :class="'h-16 pt-4 md:h-24'" />
           <button type="button" class="rounded-md p-2.5 text-slate-900 dark:text-slate-100 lg:hidden" @click="mobileMenuOpen = true">

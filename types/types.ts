@@ -1,3 +1,8 @@
+// components/Logo.vue
+export interface Logo {
+  class?: string;
+}
+
 // components/MenuDesktop.vue
 export interface MenuDesktop {
   menuClass: string;

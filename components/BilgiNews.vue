@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="pending" class="py-4 mb-2 rounded-md text-slate-800 bg-slate-300 dark:bg-slate-700 dark:text-slate-200 last:mb-0">{{ $t('loading') }}</div>
+    <div v-if="pending" class="px-8 py-4 mb-2 rounded-md text-slate-800 bg-slate-300 dark:bg-slate-700 dark:text-slate-200 last:mb-0">{{ $t('loading') }}</div>
 
     <div v-else-if="filteredNews.length || filteredEvents.length">
     
@@ -34,9 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue';
-import { useI18n } from 'vue-i18n'; 
-import { useFetch, useRuntimeConfig } from 'nuxt/app';
+
 import type { NewsResult } from "@/types/types";
 
 const config = useRuntimeConfig();

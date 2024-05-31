@@ -2,9 +2,10 @@
   <div class="bg-slate-100 dark:bg-slate-900 mb-10
   [&_.router-link-active]:border-malachite-500 
   [&_.router-link-exact-active]:border-malachite-500 
+  max-w-screen-xl mx-auto
   ">
     <header class="absolute inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-7xl">
+      <div class="max-w-screen-xl mx-auto">
         <div class="flex justify-between pt-6 pl-2 mx-4">
 
           <Logo :class="'h-16 pt-4 md:h-24'" />
@@ -15,14 +16,12 @@
             <Bars3Icon class="w-6 h-6" aria-hidden="true" />
           </button>
         </div>
-        <div class="relative px-4 pt-6 lg:max-w-2xl lg:pr-0">
-          
+        <div class="relative px-4 pt-6 lg:max-w-screen-xl lg:pr-0">
           <!-- Desktop Menu -->
           <div class="flex align-middle ">
             <MenuDesktop :menuClass="'flex justify-between lg:justify-start'" :menuContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'" :ColorModeClass="'ml-6'" />
           </div>
           <!-- Desktop Menu End -->
-          
         </div>
       </div>
 
