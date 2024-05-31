@@ -10,7 +10,7 @@
           </client-only>
           <Logo :class="'h-16 pt-4 md:h-24'" />
         </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="emitClose">
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-slate-900 dark:text-slate-100" @click="emitClose">
           <span class="sr-only">{{ $t('closemenu') }}</span>
           <XMarkIcon class="w-6 h-6" aria-hidden="true" />
         </button>

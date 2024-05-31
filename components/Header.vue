@@ -8,7 +8,7 @@
         <div class="flex justify-between pt-6 pl-2 mx-4">
 
           <Logo :class="'h-16 pt-4 md:h-24'" />
-          <button type="button" class=" rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
+          <button type="button" class=" rounded-md p-2.5 text-slate-900 dark:text-slate-100 lg:hidden" @click="mobileMenuOpen = true">
             <client-only>
               <span class="sr-only">{{ $t('closemenu') }}</span>
             </client-only>
