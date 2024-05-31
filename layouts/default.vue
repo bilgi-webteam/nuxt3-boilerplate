@@ -33,8 +33,10 @@
         [&_h5]:text-base 
         [&_h5]:font-bold
         [&_h5]:font-Libre
+        
+        max-w-screen-xl mx-auto
       ">
-        <div class="max-w-screen-xl mx-auto"><NuxtPage /></div>
+        <NuxtPage />
       </main>
     </div>
     <Footer />
