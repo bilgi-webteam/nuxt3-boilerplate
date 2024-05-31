@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-  const config = useRuntimeConfig();
-  const email = config.public.email;
-  import { EnvelopeIcon } from '@heroicons/vue/24/outline'
+const config = useRuntimeConfig();
+const email = config.public.email;
+import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 </script>

@@ -41,33 +41,33 @@
   </div>
 </template>
 <script setup lang="ts">
-  const { t, locale } = useI18n();
-  const config = useRuntimeConfig();
-  const route = useRoute();
-  const siteurl = config.public.siteurl;
-  const currentFullUrl = computed(() => `${siteurl}${route.path}`);
+const { t, locale } = useI18n();
+const config = useRuntimeConfig();
+const route = useRoute();
+const siteurl = config.public.siteurl;
+const currentFullUrl = computed(() => `${siteurl}${route.path}`);
 
-  // Watch the currentFullUrl to update SEO metadata when it changes
-  watchEffect(() => {
-    useSeoMeta({
-      ogUrl: currentFullUrl.value,
-      ogImage: `${siteurl}/share.jpg`,
-      twitterImage: `${siteurl}/share.jpg`,
-      twitterCard: 'summary_large_image',
-    });
+// Watch the currentFullUrl to update SEO metadata when it changes
+watchEffect(() => {
+  useSeoMeta({
+    ogUrl: currentFullUrl.value,
+    ogImage: `${siteurl}/share.jpg`,
+    twitterImage: `${siteurl}/share.jpg`,
+    twitterCard: 'summary_large_image',
   });
+});
 
-  useHead({
-    titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`,
-    htmlAttrs: {
-      lang: locale.value
-    },
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/favicon.png'
-      }
-    ]
-  })
+useHead({
+  titleTemplate: (titleChunk) => `${titleChunk} - ${t('siteName')}`,
+  htmlAttrs: {
+    lang: locale.value
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
 </script>

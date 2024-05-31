@@ -1,20 +1,23 @@
-// types/types.ts
-export interface MenuProps {
+// components/MenuDesktop.vue
+export interface MenuDesktop {
   menuClass: string;
   menuContainerClass: string;
   ColorModeClass: string;
 }
 
-export interface MobileMenuProps {
+// components/MenuMobile.vue
+export interface MenuMobile {
   mobileMenuOpen: boolean;
   headerData: Record<string, any>;
   navigation: Array<any>;
 }
 
-export interface AlertProps {
+// components/Alert.vue
+export interface Alert {
   class?: string;
 }
 
+// components/BilgiNews.vue
 export interface NewsItem {
   id: string;
   title: string;
@@ -22,11 +25,11 @@ export interface NewsItem {
   url: string;
   image: string;
 }
-
 export interface NewsResult {
   results: NewsItem[];
 }
 
+// components/Products.vue
 export interface Product {
   id: number;
   title: string;

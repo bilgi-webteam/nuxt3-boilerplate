@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { navigation } from '@/utils/navigation.js';
-import type { MenuProps } from "@/types/types";
+import type { MenuDesktop } from "@/types/types";
 const { t } = useI18n();
-const props = defineProps<MenuProps>();
+const props = defineProps<MenuDesktop>();
 </script>

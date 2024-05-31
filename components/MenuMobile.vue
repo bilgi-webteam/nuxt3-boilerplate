@@ -53,10 +53,10 @@
 import { defineProps, defineEmits } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { XMarkIcon, MinusIcon } from '@heroicons/vue/24/outline'
-import type { MobileMenuProps } from "@/types/types";
+import type { MenuMobile } from "@/types/types";
 const { t } = useI18n();
 const { headerData } = useHeaderData();
-const props = defineProps<MobileMenuProps>();
+const props = defineProps<MenuMobile>();
 const emit = defineEmits(['update:mobileMenuOpen']);
 
 function emitClose() {

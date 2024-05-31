@@ -6,13 +6,13 @@
   </div>
 </template>
 
-<script setup>
-  import { GlobeAltIcon } from '@heroicons/vue/20/solid'
-  const { locale, locales, setLocale } = useI18n()
-  const switchLocalePath = useSwitchLocalePath()
-  const availableLocales = computed(() => locales.value.filter(l => l.code !== locale.value))
-  const language = computed({
-    get: () => locale.value,
-    set: (value) => setLocale(value)
-  })
+<script setup lang="ts">
+import { GlobeAltIcon } from '@heroicons/vue/20/solid'
+const { locale, locales, setLocale } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const availableLocales = computed(() => locales.value.filter(l => l.code !== locale.value))
+const language = computed({
+  get: () => locale.value,
+  set: (value) => setLocale(value)
+})
 </script>

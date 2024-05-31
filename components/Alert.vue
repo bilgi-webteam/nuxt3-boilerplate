@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import type { AlertProps } from "@/types/types";
-const props = defineProps<AlertProps>();
+import type { Alert } from "@/types/types";
+const props = defineProps<Alert>();
 
 const computedClass = computed(() => {
   let additionalClass = props.class || 'bg-yellow-400 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-400';

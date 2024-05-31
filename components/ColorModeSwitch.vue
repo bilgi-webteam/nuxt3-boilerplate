@@ -19,15 +19,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Switch } from '@headlessui/vue'
 import { SunIcon, MoonIcon } from '@heroicons/vue/20/solid'
-
-
 const { t } = useI18n()
 const colorMode = useColorMode()
 const isDarkMode = ref(colorMode.value === 'dark')
-
 const toggleColorMode = () => {
   isDarkMode.value = !isDarkMode.value
   colorMode.preference = isDarkMode.value ? 'dark' : 'light'
