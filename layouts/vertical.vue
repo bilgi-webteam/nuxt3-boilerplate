@@ -4,21 +4,13 @@
   [&_.router-link-active]:border-b-malachite-500 
   [&_.router-link-exact-active]:border-b-malachite-500 
   ">
-    <div class="max-w-screen-xl min-w-full p-4 pt-0 mx-auto">
+    <div>
       <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
         <div class="grid-cols-5 gap-4 mx-auto max-w-7xl md:grid">
-          <div class="px-2">
-            
-            <!-- Desktop Menu -->
-            <div>
-              <MenuDesktop :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'" 
-              :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'" :ColorModeClass="'mt-10'" />
-            </div>
-            <!-- Desktop Menu End -->
-
-          </div>
+          <MenuDesktop :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'" 
+            :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'" :ColorModeClass="'mt-10'" />
           <div class="
             col-span-4
             [&_a]:border-b-2 
