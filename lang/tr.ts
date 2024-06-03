@@ -5,6 +5,7 @@ export default {
 
   welcome: "Hoşgeldiniz",
   loading: "Yükleniyor...",
+  error: "Bir hata oluştu",
 
   dark: "Koyu",
   light: "Açık",

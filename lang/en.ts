@@ -5,6 +5,7 @@ export default {
 
   welcome: "Welcome",
   loading: "Loading...",
+  error: "You've Arrived Here on Error",
 
   dark: "Dark",
   light: "Light",

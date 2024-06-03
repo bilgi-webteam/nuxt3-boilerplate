@@ -5,7 +5,7 @@
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="max-w-screen-xl mx-auto">
         <div class="flex justify-between pt-6">
-          <Logo :class="'h-16 pt-4 md:h-24'" />
+          <Logo :class="'h-16 pt-4 md:h-24 ml-6 sm:ml-0'" />
           <button
             type="button"
             class="rounded-md p-2.5 text-slate-900 dark:text-slate-100 lg:hidden"
