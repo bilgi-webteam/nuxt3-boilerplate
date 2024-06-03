@@ -3,7 +3,7 @@
     class="mx-auto mb-10 max-w-screen-xl bg-slate-100 dark:bg-slate-900 [&_.router-link-active]:border-malachite-500 [&_.router-link-exact-active]:border-malachite-500"
   >
     <header class="absolute inset-x-0 top-0 z-50">
-      <div class="mx-auto max-w-screen-xl">
+      <div class="max-w-screen-xl mx-auto">
         <div class="flex justify-between pt-6">
           <Logo :class="'h-16 pt-4 md:h-24'" />
           <button
@@ -14,18 +14,20 @@
             <client-only>
               <span class="sr-only">{{ $t("closemenu") }}</span>
             </client-only>
-            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon class="w-6 h-6" aria-hidden="true" />
           </button>
         </div>
 
         <MenuDesktop
-          :menuClass="'relative pt-6 lg:pr-0 flex justify-between lg:justify-start'"
-          :menuContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
-          :SubMenuItemClass="'rounded-t-md group-hover:bg-slate-200 dark:group-hover:bg-slate-700'"
-          :SubMenuWrapperClass="' group-hover:rounded-md absolute grid grid-rows-0 group-hover:grid-rows-full transition-all ease-in-out  pb-3'"
-          :SubMenuClass="' rounded-b-lg overflow-hidden bg-slate-200 shadow-md dark:bg-slate-700'"
-          :ColorModeClass="'ml-6'"
-          :SingleMenuClass="''"
+          :navWrapperClass="'relative pt-6 lg:pr-0 flex justify-between lg:justify-start'"
+          :navLinksContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
+          :dropdownTriggerWrapperClass="'relative group'"
+          :dropdownTriggerClass="'inline-block px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100 rounded-t-md group-hover:bg-slate-200 dark:group-hover:bg-slate-700'"
+          :dropdownnavWrapperClass="'min-w-full group-hover:rounded-md absolute grid grid-rows-0 group-hover:grid-rows-full transition-all ease-in-out  pb-3'"
+          :dropdownMenuClass="'min-w-max rounded-b-lg overflow-hidden bg-slate-200 shadow-md dark:bg-slate-700'"
+          :dropdownLinkClass="'block py-2 pb-0 mx-4 text-sm border-b-2 min-w-max border-b-transparent text-slate-900 last:mb-3 dark:text-white'"
+          :navItemClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
+          :colorModeSwitchClass="'hidden sm:block ml-6'"
         />
       </div>
 
@@ -38,7 +40,7 @@
     </header>
     <div class="relative">
       <div
-        class="absolute right-0 z-50 hidden rounded-bl-md bg-slate-100 p-4 dark:bg-slate-900 md:block"
+        class="absolute right-0 z-50 hidden p-4 rounded-bl-md bg-slate-100 dark:bg-slate-900 md:block"
       >
         <LangOther
           class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 md:pl-4"
@@ -46,7 +48,7 @@
       </div>
       <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
         <svg
-          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-slate-100 dark:fill-slate-900 lg:block"
+          class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-900 lg:block"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
           aria-hidden="true"
@@ -54,15 +56,15 @@
           <polygon points="0,0 90,0 50,100 0,100" />
         </svg>
         <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
-          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+          <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-lg">
             <client-only>
               <h1
-                class="text-balance font-Libre text-5xl font-bold tracking-tight text-malachite-600 dark:text-malachite-300"
+                class="text-5xl font-bold tracking-tight text-balance font-Libre text-malachite-600 dark:text-malachite-300"
               >
                 {{ headerData.title || " " }}
               </h1>
               <p
-                class="mt-6 text-balance text-lg leading-8 text-gray-600 dark:text-slate-100"
+                class="mt-6 text-lg leading-8 text-gray-600 text-balance dark:text-slate-100"
               >
                 {{ headerData.paragraph || " " }}
               </p>

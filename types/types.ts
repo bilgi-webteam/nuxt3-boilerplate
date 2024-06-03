@@ -5,14 +5,15 @@ export interface Logo {
 
 // components/MenuDesktop.vue
 export interface MenuDesktop {
-  menuClass?: string;
-  menuContainerClass?: string;
-  ColorModeClass?: string;
-  SubMenuItemClass?: string;
-  SubMenuWrapperClass?: string;
-  SubMenuClass?: string;
-  SubItemClass?: string;
-  SingleMenuClass?: string;
+  navWrapperClass?: string;
+  navLinksContainerClass?: string;
+  navItemClass?: string;
+  dropdownnavWrapperClass?: string;
+  dropdownTriggerWrapperClass?: string;
+  dropdownTriggerClass?: string;
+  dropdownMenuClass?: string;
+  dropdownLinkClass?: string;
+  colorModeSwitchClass?: string;
 }
 
 // components/MenuMobile.vue

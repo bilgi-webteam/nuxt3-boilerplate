@@ -1,23 +1,21 @@
 <template>
-  <nav :class="menuClass" aria-label="Global">
-    <div :class="menuContainerClass">
+  <nav :class="navWrapperClass" aria-label="Global">
+    <div :class="navLinksContainerClass">
       <template v-for="menu in navigation" :key="menu.name">
-        <div class="group relative" v-if="menu.subItems">
+        <div :class="dropdownTriggerWrapperClass" v-if="menu.subItems">
           <NuxtLinkLocale
             :to="menu.to"
-            class="border-b-2 border-b-transparent px-3 py-1 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100"
-            :class="SubMenuItemClass"
+            :class="dropdownTriggerClass"
           >
-            <span class="mt-1 inline-block">{{ $t(menu.name) }}</span>
+            {{ $t(menu.name) }}
           </NuxtLinkLocale>
-          <div class="min-w-full" :class="SubMenuWrapperClass">
-            <div class="min-w-max" :class="SubMenuClass">
+          <div :class="dropdownnavWrapperClass">
+            <div :class="dropdownMenuClass">
               <NuxtLinkLocale
                 v-for="subItem in menu.subItems"
                 :key="subItem.name"
                 :to="subItem.to"
-                class="mx-4 block min-w-max border-b-2 border-b-transparent py-2 pb-0 text-sm text-slate-900 last:mb-3 dark:text-white"
-                :class="SubItemClass"
+                :class="dropdownLinkClass"
               >
                 {{ $t(subItem.name) }}
               </NuxtLinkLocale>
@@ -27,14 +25,13 @@
         <NuxtLinkLocale
           v-else
           :to="menu.to"
-          class="border-b-2 border-b-transparent px-3 py-1 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100"
-          :class="SingleMenuClass"
+          :class="navItemClass"
         >
           {{ $t(menu.name) }}
         </NuxtLinkLocale>
       </template>
     </div>
-    <div :class="ColorModeClass" class="hidden sm:block">
+    <div :class="colorModeSwitchClass">
       <ColorModeSwitch />
     </div>
   </nav>
