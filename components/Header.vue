@@ -19,15 +19,15 @@
         </div>
 
         <MenuDesktop
-          :navWrapperClass="'relative pt-6 lg:pr-0 flex justify-between lg:justify-start'"
+          :navWrapperClass="'relative flex justify-between pt-6 lg:pr-0 lg:justify-start'"
           :navLinksContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
           :dropdownTriggerWrapperClass="'relative group'"
           :dropdownTriggerClass="'inline-block px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100 rounded-t-md group-hover:bg-slate-200 dark:group-hover:bg-slate-700'"
-          :dropdownnavWrapperClass="'min-w-full group-hover:rounded-md absolute grid grid-rows-0 group-hover:grid-rows-full transition-all ease-in-out  pb-3'"
-          :dropdownMenuClass="'min-w-max rounded-b-lg overflow-hidden bg-slate-200 shadow-md dark:bg-slate-700'"
+          :dropdownnavWrapperClass="'absolute grid min-w-full pb-3 transition-all ease-in-out group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full'"
+          :dropdownMenuClass="'overflow-hidden rounded-b-lg shadow-md min-w-max bg-slate-200 dark:bg-slate-700'"
           :dropdownLinkClass="'block py-2 pb-0 mx-4 text-sm border-b-2 min-w-max border-b-transparent text-slate-900 last:mb-3 dark:text-white'"
           :navItemClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
-          :colorModeSwitchClass="'hidden sm:block ml-6'"
+          :colorModeSwitchClass="'hidden ml-6 sm:block'"
         />
       </div>
 
