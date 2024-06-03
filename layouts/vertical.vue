@@ -10,6 +10,10 @@
           <MenuDesktop
             :menuClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
             :menuContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'"
+            :SubMenuItemClass="''"
+            :SubMenuWrapperClass="''"
+            :SubMenuClass="''"
+            :SubItemClass="`ml-3 before:mr-2 before:content-['-'] before:w-5`"
             :ColorModeClass="'mt-10'"
           />
           <div

@@ -21,7 +21,11 @@
         <MenuDesktop
           :menuClass="'relative pt-6 lg:pr-0 flex justify-between lg:justify-start'"
           :menuContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
+          :SubMenuItemClass="'rounded-t-md group-hover:bg-slate-200 dark:group-hover:bg-slate-700'"
+          :SubMenuWrapperClass="' group-hover:rounded-md absolute grid grid-rows-0 group-hover:grid-rows-full transition-all ease-in-out  pb-3'"
+          :SubMenuClass="' rounded-b-lg overflow-hidden bg-slate-200 shadow-md dark:bg-slate-700'"
           :ColorModeClass="'ml-6'"
+          :SingleMenuClass="''"
         />
       </div>
 
