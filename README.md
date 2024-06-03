@@ -1,6 +1,5 @@
 # Nuxt 3 Boilerplate
 
-
 ## Kurulum
 
 Komutun sonun alan adını (test.bilgi.edu.tr) ekleyerek repo'yu klonla, ve klasöre gir.
@@ -21,8 +20,8 @@ yarn install
 ```bash
 yarn dev
 ```
-Tarayıcıda http://localhost:3000 adresini aç.
 
+Tarayıcıda http://localhost:3000 adresini aç.
 
 ## Nuxt Config Ayarları
 
@@ -31,13 +30,13 @@ Tarayıcıda http://localhost:3000 adresini aç.
 Site adresini gir.
 
 ```ts
-const BASE_URL = 'test.bilgi.edu.tr'; 
+const BASE_URL = "test.bilgi.edu.tr";
 ```
 
 Mail adresini gir. (`Footer.vue`'da kullanım örneği var)
 
 ```ts
-email: 'info@bilgi.edu.tr'
+email: "info@bilgi.edu.tr";
 ```
 
 Sayfaların adreslerini yaz.
@@ -134,46 +133,40 @@ aboutHeaderDescription: 'Hakkımızda Sayfası Üstalan Açıklaması',
 
 `layouts/default.vue`
 
-`<body>` ' ye eklenecek class'ları ilk div'e; içerikler'e eklenecek class'ları `<main>` e ekle. 
+`<body>` ' ye eklenecek class'ları ilk div'e; içerikler'e eklenecek class'ları `<main>` e ekle.
 
 ```html
-<div class="flex flex-col justify-between min-h-svh font-Raleway bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200">
+<div
+  class="flex min-h-svh flex-col justify-between bg-slate-100 font-Raleway text-slate-900 dark:bg-slate-900 dark:text-slate-200"
+></div>
 ```
 
 ```html
-<main 
-  class="
-    [&_a]:border-b-2 
-    [&_a]:border-dotted
-    [&_a]:border-malachite-500 
-    [&_a]:dark:border-malachite-200 
-    hover:[&_a]:border-solid
-
-    [&_p]:mb-4
-    [&_p]:text-pretty
-
-    ...
-  "
->
+<main
+  class="... [&_a]:border-b-2 [&_a]:border-dotted [&_a]:border-malachite-500 hover:[&_a]:border-solid [&_a]:dark:border-malachite-200 [&_p]:mb-4 [&_p]:text-pretty"
+></main>
 ```
 
 ## Üst alan (Header)
 
-`components/Header.vue` 
+`components/Header.vue`
 
-Menü başlıklarını yaz. `name` ve `to` kısmlarıda i18n adreslerini kullan. 
+Menü başlıklarını yaz. `name` ve `to` kısmlarıda i18n adreslerini kullan.
 
 ```ts
-const navigation =  [
-  { name: 'index', to: '/' },
-  { name: 'about', to: 'about', 
+const navigation = [
+  { name: "index", to: "/" },
+  {
+    name: "about",
+    to: "about",
     subItems: [
-      { name: 'about_theteam', to: 'about_theteam' },
-      { name: 'about_company', to: 'about_company' }
-  ]},
-  { name: 'news', to: 'news' },
-  { name: 'contact', to: 'contact' },
-]
+      { name: "about_theteam", to: "about_theteam" },
+      { name: "about_company", to: "about_company" },
+    ],
+  },
+  { name: "news", to: "news" },
+  { name: "contact", to: "contact" },
+];
 ```
 
 ## Sayfalar
@@ -183,7 +176,7 @@ const navigation =  [
 Sayfanin dosya adını yaz.
 
 ```ts
-const pageName = 'about'; 
+const pageName = "about";
 ```
 
 Üst alan görselini seç.
@@ -196,7 +189,7 @@ image: '/images/d.png',
 
 `content/aboutTR.vue`, `content/aboutEN.vue` ...
 
-Her dil için ayrı birer sayfa oluştur. 
+Her dil için ayrı birer sayfa oluştur.
 
 Sayfa adı ile başlayıp büyük harfle dilin kodunu ekle.
 
@@ -204,7 +197,7 @@ Sayfa adı ile başlayıp büyük harfle dilin kodunu ekle.
 
 Sunucuda nginx ayarlarini [bu sayfa](https://www.notion.so/tarikkavaz/TBL-yeni-site-a-ma-cd39622843504cb8bfa40bef2f6af7ea)daki gibi yap
 
-`package.json` 
+`package.json`
 
 Sitenin sunucu IP ve klasör bilgilerini (test.bilgi.edu.tr) gir.
 
@@ -224,12 +217,10 @@ yarn deploy
 Bu komut sırasıyla;
 
 - Lokaldeki `dist` klasörünü siler,
-- `nuxt generate` ile yeni `dist` klasörünü oluşturur, 
-- Sunucudak  `dist` klasörünü siler,
-- Secure Copy `scp` ile lokalde yeni oluşan `dist` klasörünü sunucuya kopyalar. 
-
-
+- `nuxt generate` ile yeni `dist` klasörünü oluşturur,
+- Sunucudak `dist` klasörünü siler,
+- Secure Copy `scp` ile lokalde yeni oluşan `dist` klasörünü sunucuya kopyalar.
 
 ---
 
-© [tarikkavaz.com](https://tarikkavaz.com) 
+© [tarikkavaz.com](https://tarikkavaz.com)

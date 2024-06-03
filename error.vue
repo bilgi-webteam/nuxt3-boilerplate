@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
-    <div class="p-4 mb-4 bg-purple-400" id="content">
+    <div class="mb-4 bg-purple-400 p-4" id="content">
       <h1>You've Arrived Here on Error</h1>
-      <button class="button" @click="goBack">{{ $t('index') }}</button>
+      <button class="button" @click="goBack">{{ $t("index") }}</button>
     </div>
   </NuxtLayout>
 </template>
@@ -11,8 +11,8 @@
 export default {
   methods: {
     goBack() {
-      this.$router.push('/')
-    }
-  }
-}
+      this.$router.push("/");
+    },
+  },
+};
 </script>

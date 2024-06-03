@@ -5,13 +5,13 @@
   </div>
 </template>
 <script setup lang="ts">
-const pageName = 'news';
+const pageName = "news";
 const { t } = useI18n();
 const { headerData } = useHeaderData();
 const { currentContent } = pageSetup(pageName);
 headerData.value = {
-  image: '/images/g.png',
+  image: "/images/g.png",
   title: t(`${pageName}HeaderTitle`),
-  paragraph: t(`${pageName}HeaderDescription`)
+  paragraph: t(`${pageName}HeaderDescription`),
 };
 </script>
