@@ -4,7 +4,7 @@
   >
     <div>
       <HeaderNoMenu />
-      <main>
+      <div>
         <div class="mx-auto max-w-7xl grid-cols-5 gap-4 md:grid">
           <MenuDesktop
             :navWrapperClass="'max-h-[calc(100vh-6rem)] sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
@@ -18,11 +18,11 @@
             :colorModeSwitchClass="'hidden ml-3 mt-5 sm:block'"
           />
 
-          <div id="content" class="col-span-4">
+          <main id="content" class="col-span-4">
             <NuxtPage />
-          </div>
+          </main>
         </div>
-      </main>
+      </div>
     </div>
     <Footer />
   </div>
