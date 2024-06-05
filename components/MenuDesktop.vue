@@ -3,10 +3,7 @@
     <div :class="navLinksContainerClass">
       <template v-for="menu in navigation" :key="menu.name">
         <div :class="dropdownTriggerWrapperClass" v-if="menu.subItems">
-          <NuxtLinkLocale
-            :to="menu.to"
-            :class="dropdownTriggerClass"
-          >
+          <NuxtLinkLocale :to="menu.to" :class="dropdownTriggerClass">
             {{ $t(menu.name) }}
           </NuxtLinkLocale>
           <div :class="dropdownnavWrapperClass">
@@ -22,11 +19,7 @@
             </div>
           </div>
         </div>
-        <NuxtLinkLocale
-          v-else
-          :to="menu.to"
-          :class="navItemClass"
-        >
+        <NuxtLinkLocale v-else :to="menu.to" :class="navItemClass">
           {{ $t(menu.name) }}
         </NuxtLinkLocale>
       </template>

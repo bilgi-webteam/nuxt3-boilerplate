@@ -3,9 +3,9 @@
     class="mx-auto mb-10 max-w-screen-xl bg-slate-100 dark:bg-slate-900 [&_.router-link-active]:border-malachite-500 [&_.router-link-exact-active]:border-malachite-500"
   >
     <header class="absolute inset-x-0 top-0 z-50">
-      <div class="max-w-screen-xl mx-auto">
+      <div class="mx-auto max-w-screen-xl">
         <div class="flex justify-between pt-6">
-          <Logo :class="'h-16 pt-4 md:h-24 ml-6 sm:ml-0'" />
+          <Logo :class="'ml-6 h-16 pt-4 sm:ml-0 md:h-24'" />
           <button
             type="button"
             class="rounded-md p-2.5 text-slate-900 dark:text-slate-100 lg:hidden"
@@ -14,7 +14,7 @@
             <client-only>
               <span class="sr-only">{{ $t("closemenu") }}</span>
             </client-only>
-            <Bars3Icon class="w-6 h-6" aria-hidden="true" />
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
 
@@ -40,7 +40,7 @@
     </header>
     <div class="relative">
       <div
-        class="absolute right-0 z-50 hidden p-4 rounded-bl-md bg-slate-100 dark:bg-slate-900 md:block"
+        class="absolute right-0 z-50 hidden rounded-bl-md bg-slate-100 p-4 dark:bg-slate-900 md:block"
       >
         <LangOther
           class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100 md:pl-4"
@@ -48,7 +48,7 @@
       </div>
       <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
         <svg
-          class="absolute inset-y-0 hidden h-full transform translate-x-1/2 right-8 w-80 fill-slate-100 dark:fill-slate-900 lg:block"
+          class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-slate-100 dark:fill-slate-900 lg:block"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
           aria-hidden="true"
@@ -56,15 +56,15 @@
           <polygon points="0,0 90,0 50,100 0,100" />
         </svg>
         <div class="relative py-32 sm:py-40 lg:py-56 lg:pr-0">
-          <div class="max-w-2xl mx-auto lg:mx-0 lg:max-w-lg">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
             <client-only>
               <h1
-                class="text-5xl font-bold tracking-tight text-balance font-Libre text-malachite-600 dark:text-malachite-300"
+                class="text-balance font-Libre text-5xl font-bold tracking-tight text-malachite-600 dark:text-malachite-300"
               >
                 {{ headerData.title || " " }}
               </h1>
               <p
-                class="mt-6 text-lg leading-8 text-gray-600 text-balance dark:text-slate-100"
+                class="mt-6 text-balance text-lg leading-8 text-gray-600 dark:text-slate-100"
               >
                 {{ headerData.paragraph || " " }}
               </p>

@@ -17,10 +17,10 @@
           @click="emitClose"
         >
           <span class="sr-only">{{ $t("closemenu") }}</span>
-          <XMarkIcon class="w-6 h-6" aria-hidden="true" />
+          <XMarkIcon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="flow-root mt-10">
+      <div class="mt-10 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
           <div
             class="space-y-2 py-6 [&_.router-link-active]:bg-malachite-300 dark:[&_.router-link-active]:text-slate-900 [&_.router-link-exact-active]:bg-malachite-300 dark:[&_.router-link-exact-active]:text-slate-900"
@@ -28,7 +28,7 @@
             <template v-for="menu in navigation" :key="menu.name">
               <NuxtLinkLocale
                 :to="menu.to"
-                class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
+                class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
                 @click="emitClose"
               >
                 {{ $t(menu.name) }}
@@ -38,7 +38,7 @@
                   v-for="subItem in menu.subItems"
                   :key="subItem.name"
                   :to="subItem.to"
-                  class="before:content-['-'] before:w-5 -mx-3 flex items-center px-3 py-2 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
+                  class="-mx-3 flex items-center px-3 py-2 text-base font-semibold leading-7 text-slate-900 before:w-5 before:content-['-'] dark:text-slate-100"
                   @click="emitClose"
                 >
                   {{ $t(subItem.name) }}
@@ -46,10 +46,10 @@
               </template>
             </template>
             <div
-              class="relative flex justify-between pt-5 align-middle border-t-2 border-slate-700"
+              class="relative flex justify-between border-t-2 border-slate-700 pt-5 align-middle"
             >
               <LangOther
-                class="block px-3 py-6 -mx-3 text-sm font-semibold leading-6 text-slate-900 hover:bg-gray-50 dark:text-slate-100"
+                class="-mx-3 block px-3 py-6 text-sm font-semibold leading-6 text-slate-900 hover:bg-gray-50 dark:text-slate-100"
               />
               <ColorModeSwitch />
             </div>

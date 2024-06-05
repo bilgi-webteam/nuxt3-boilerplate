@@ -6,7 +6,7 @@
       <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
-        <div class="grid-cols-5 gap-4 mx-auto max-w-7xl md:grid">
+        <div class="mx-auto max-w-7xl grid-cols-5 gap-4 md:grid">
           <MenuDesktop
             :navWrapperClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
             :navLinksContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'"
