@@ -28,10 +28,6 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  tooltipContent: {
-    type: String,
-    required: true,
-  },
-});
+import type { ToolTip } from "@/types/types";
+const props = defineProps<ToolTip>();
 </script>

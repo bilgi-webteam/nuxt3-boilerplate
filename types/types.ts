@@ -3,6 +3,11 @@ export interface Logo {
   class?: string;
 }
 
+// components/Tooltip.vue
+export interface ToolTip {
+  tooltipContent: string;
+}
+
 // components/MenuDesktop.vue
 export interface MenuDesktop {
   navWrapperClass?: string;
