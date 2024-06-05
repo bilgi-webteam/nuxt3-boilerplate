@@ -7,7 +7,7 @@
       <div>
         <div class="mx-auto max-w-7xl grid-cols-5 gap-4 md:grid">
           <MenuDesktop
-            :navWrapperClass="'max-h-[calc(100vh-6rem)] sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
+            :navWrapperClass="'max-h-[calc(100vh-7rem)] sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
             :navContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'"
             :dropdownTriggerWrapperClass="'relative group'"
             :dropdownTriggerClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
