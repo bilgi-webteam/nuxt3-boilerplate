@@ -6,12 +6,12 @@ export interface Logo {
 // components/MenuDesktop.vue
 export interface MenuDesktop {
   navWrapperClass?: string;
-  navLinksContainerClass?: string;
+  navContainerClass?: string;
   navItemClass?: string;
-  dropdownnavWrapperClass?: string;
+  dropdownWrapperClass?: string;
   dropdownTriggerWrapperClass?: string;
   dropdownTriggerClass?: string;
-  dropdownMenuClass?: string;
+  dropdownContainerClass?: string;
   dropdownLinkClass?: string;
   colorModeSwitchClass?: string;
 }

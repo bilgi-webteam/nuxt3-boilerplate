@@ -9,11 +9,11 @@
         <div class="mx-auto max-w-7xl grid-cols-5 gap-4 md:grid">
           <MenuDesktop
             :navWrapperClass="'sticky items-center justify-between hidden border-r-[1px] border-r-slate-500 top-5 lg:justify-start md:block pr-2 bg-slate-100 dark:bg-slate-900'"
-            :navLinksContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'"
+            :navContainerClass="'md:pl-0 lg:flex lg:flex-col lg:gap-x-6 gap-y-2'"
             :dropdownTriggerWrapperClass="'relative group'"
             :dropdownTriggerClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
-            :dropdownnavWrapperClass="'min-w-full'"
-            :dropdownMenuClass="'min-w-max'"
+            :dropdownWrapperClass="'min-w-full'"
+            :dropdownContainerClass="'min-w-max'"
             :dropdownLinkClass="`block py-2 pb-0 mx-4 text-sm border-b-2 min-w-max border-b-transparent text-slate-900 last:mb-3 dark:text-white ml-3 before:mr-2 before:content-['-'] before:w-5`"
             :navItemClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
             :colorModeSwitchClass="'hidden mt-10 sm:block'"

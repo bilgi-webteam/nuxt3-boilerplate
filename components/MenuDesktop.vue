@@ -1,13 +1,13 @@
 <template>
   <nav :class="navWrapperClass" aria-label="Global">
-    <div :class="navLinksContainerClass">
+    <div :class="navContainerClass">
       <template v-for="menu in navigation" :key="menu.name">
         <div :class="dropdownTriggerWrapperClass" v-if="menu.subItems">
           <NuxtLinkLocale :to="menu.to" :class="dropdownTriggerClass">
             {{ $t(menu.name) }}
           </NuxtLinkLocale>
-          <div :class="dropdownnavWrapperClass">
-            <div :class="dropdownMenuClass">
+          <div :class="dropdownWrapperClass">
+            <div :class="dropdownContainerClass">
               <NuxtLinkLocale
                 v-for="subItem in menu.subItems"
                 :key="subItem.name"

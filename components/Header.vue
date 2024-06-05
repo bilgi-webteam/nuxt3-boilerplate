@@ -20,11 +20,11 @@
 
         <MenuDesktop
           :navWrapperClass="'relative flex justify-between pt-6 lg:pr-0 lg:justify-start'"
-          :navLinksContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
+          :navContainerClass="'hidden md:pl-0 lg:flex lg:gap-x-3'"
           :dropdownTriggerWrapperClass="'relative group'"
           :dropdownTriggerClass="'inline-block px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100 rounded-t-md group-hover:bg-slate-200 dark:group-hover:bg-slate-700'"
-          :dropdownnavWrapperClass="'absolute grid min-w-full pb-3 transition-all ease-in-out group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full'"
-          :dropdownMenuClass="'overflow-hidden rounded-b-lg shadow-md min-w-max bg-slate-200 dark:bg-slate-700'"
+          :dropdownWrapperClass="'absolute grid min-w-full pb-3 transition-all ease-in-out group-hover:rounded-md grid-rows-0 group-hover:grid-rows-full'"
+          :dropdownContainerClass="'overflow-hidden rounded-b-lg shadow-md min-w-max bg-slate-200 dark:bg-slate-700'"
           :dropdownLinkClass="'block py-2 pb-0 mx-4 text-sm border-b-2 min-w-max border-b-transparent text-slate-900 last:mb-3 dark:text-white'"
           :navItemClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
           :colorModeSwitchClass="'hidden ml-6 sm:block'"
