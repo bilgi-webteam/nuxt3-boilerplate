@@ -3,7 +3,6 @@
     class="flex min-h-svh flex-col justify-between bg-slate-100 font-Raleway text-slate-900 dark:bg-slate-900 dark:text-slate-200 [&_.router-link-active]:border-b-malachite-500 [&_.router-link-exact-active]:border-b-malachite-500"
   >
     <div>
-      <NuxtLoadingIndicator />
       <HeaderNoMenu />
       <main>
         <div class="mx-auto max-w-7xl grid-cols-5 gap-4 md:grid">

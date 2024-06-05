@@ -3,7 +3,6 @@
     class="flex min-h-svh flex-col justify-between bg-slate-100 font-Raleway text-slate-900 dark:bg-slate-900 dark:text-slate-200"
   >
     <div class="mx-auto min-w-full max-w-screen-xl p-4 pt-0">
-      <NuxtLoadingIndicator />
       <Header />
       <main class="container mx-auto w-full">
         <div
