@@ -4,9 +4,7 @@
   >
     <div class="mx-auto min-w-full max-w-screen-xl p-4 pt-0">
       <Header />
-      <main
-        class="mx-auto max-w-screen-xl [&_a]:border-b-2 [&_a]:border-dotted [&_a]:border-malachite-500 hover:[&_a]:border-solid [&_a]:dark:border-malachite-200 [&_h2]:mb-6 [&_h2]:font-Libre [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-4 [&_h3]:font-Libre [&_h3]:text-xl [&_h3]:font-bold [&_h4]:mb-2 [&_h4]:font-Libre [&_h4]:text-lg [&_h4]:font-bold [&_h5]:mb-1 [&_h5]:font-Libre [&_h5]:text-base [&_h5]:font-bold [&_p]:mb-4 [&_p]:text-pretty"
-      >
+      <main id="content" class="mx-auto max-w-screen-xl">
         <NuxtPage />
       </main>
     </div>

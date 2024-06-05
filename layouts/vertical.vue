@@ -17,9 +17,8 @@
             :navItemClass="'px-3 py-1 text-sm font-semibold leading-6 border-b-2 border-b-transparent text-slate-900 dark:text-slate-100'"
             :colorModeSwitchClass="'hidden ml-3 mt-5 sm:block'"
           />
-          <div
-            class="col-span-4 [&_a]:border-b-2 [&_a]:border-dotted [&_a]:border-malachite-500 hover:[&_a]:border-solid [&_a]:dark:border-malachite-200 [&_h2]:mb-6 [&_h2]:font-Libre [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mb-4 [&_h3]:font-Libre [&_h3]:text-xl [&_h3]:font-bold [&_h4]:mb-2 [&_h4]:font-Libre [&_h4]:text-lg [&_h4]:font-bold [&_h5]:mb-1 [&_h5]:font-Libre [&_h5]:text-base [&_h5]:font-bold [&_p]:mb-4 [&_p]:text-pretty"
-          >
+
+          <div id="content" class="col-span-4">
             <NuxtPage />
           </div>
         </div>
