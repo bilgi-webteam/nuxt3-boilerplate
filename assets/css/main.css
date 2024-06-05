@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-slate-100;
+  @apply dark:bg-slate-900;
+}
 #content {
   @apply [&_a]:border-b-2;
   @apply [&_a]:border-dotted;
