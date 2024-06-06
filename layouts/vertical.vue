@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex min-h-svh flex-col justify-between bg-slate-100 font-Raleway text-slate-900 dark:bg-slate-900 dark:text-slate-200 [&_.router-link-active]:border-b-malachite-500 [&_.router-link-exact-active]:border-b-malachite-500"
+    class="flex min-h-svh flex-col justify-between bg-slate-100 px-4 font-Raleway text-slate-900 dark:bg-slate-900 dark:text-slate-200 [&_.router-link-active]:border-b-malachite-500 [&_.router-link-exact-active]:border-b-malachite-500"
   >
     <div>
       <HeaderNoMenu />
