@@ -14,7 +14,7 @@
             <client-only>
               <span class="sr-only">{{ $t("closemenu") }}</span>
             </client-only>
-            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon class="mr-3 h-6 w-6" aria-hidden="true" />
           </button>
         </div>
 
