@@ -2,7 +2,7 @@
   <Dialog as="div" class="lg:hidden" @close="emitClose" :open="mobileMenuOpen">
     <div class="fixed inset-0 z-50" />
     <DialogPanel
-      class="fixed inset-y-0 right-0 z-[999] w-full overflow-y-auto bg-slate-100 px-6 py-6 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10"
+      class="fixed inset-y-0 right-0 z-[999] w-full overflow-y-auto bg-slate-100 px-3 py-6 dark:bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10"
     >
       <div class="flex items-center justify-between">
         <a href="/" class="-m-1.5 p-1.5">
@@ -17,7 +17,7 @@
           @click="emitClose"
         >
           <span class="sr-only">{{ $t("closemenu") }}</span>
-          <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+          <XMarkIcon class="mr-3 h-6 w-6" aria-hidden="true" />
         </button>
       </div>
       <div class="mt-10 flow-root">
@@ -28,7 +28,7 @@
             <template v-for="menu in navigation" :key="menu.name">
               <NuxtLinkLocale
                 :to="menu.to"
-                class="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
+                class="block px-3 py-2 text-base font-semibold leading-7 text-slate-900 dark:text-slate-100"
                 @click="emitClose"
               >
                 {{ $t(menu.name) }}
@@ -38,7 +38,7 @@
                   v-for="subItem in menu.subItems"
                   :key="subItem.name"
                   :to="subItem.to"
-                  class="-mx-3 flex items-center px-3 py-2 text-base font-semibold leading-7 text-slate-900 before:w-5 before:content-['-'] dark:text-slate-100"
+                  class="mx-3 flex items-center px-3 py-2 text-base font-semibold leading-7 text-slate-900 before:w-5 before:content-['-'] dark:text-slate-100"
                   @click="emitClose"
                 >
                   {{ $t(subItem.name) }}
