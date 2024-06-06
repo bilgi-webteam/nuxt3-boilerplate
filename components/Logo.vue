@@ -1,18 +1,20 @@
 <template>
   <client-only>
-    <img
-      :src="
-        'https://tbl.bilgi.edu.tr/brand-resources/logotypes/bilgi/' +
-        oppositeColorMode +
-        '/bilgi-logotype-' +
-        $i18n.locale +
-        '-' +
-        oppositeColorMode +
-        '@2x.png'
-      "
-      :class="class"
-      :alt="'Logo ' + $colorMode.value + 'Mode'"
-    />
+    <NuxtLinkLocale to="/">
+      <img
+        :src="
+          'https://tbl.bilgi.edu.tr/brand-resources/logotypes/bilgi/' +
+          oppositeColorMode +
+          '/bilgi-logotype-' +
+          $i18n.locale +
+          '-' +
+          oppositeColorMode +
+          '@2x.png'
+        "
+        :class="class"
+        :alt="'Logo ' + $colorMode.value + 'Mode'"
+      />
+    </NuxtLinkLocale>
   </client-only>
 </template>
 <script setup lang="ts">
