@@ -5,4 +5,5 @@
     sequi, aut eveniet autem perferendis itaque necessitatibus reiciendis
     tenetur quae repellendus vel!
   </p>
+  <NuxtImg format="webp" src="/images/0.png" />
 </template>

@@ -30,7 +30,7 @@
           <div class="md:min-h-12">
             <h3>{{ product.title }}</h3>
           </div>
-          <img
+          <NuxtImg
             :src="product.thumbnail"
             alt="Product thumbnail"
             class="mb-4 h-auto max-h-40 w-full border border-gray-500 object-cover"
@@ -51,7 +51,7 @@
           </div>
           <h4 class="border-b-[1px] border-gray-300">{{ $t("images") }}</h4>
           <div class="grid grid-cols-6">
-            <img
+            <NuxtImg
               v-for="image in product.images"
               :src="image"
               :alt="`${product.title} image`"

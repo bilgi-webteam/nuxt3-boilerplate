@@ -69,7 +69,7 @@
           <div
             class="absolute inset-0 bg-malachite-400 opacity-20 bg-blend-darken dark:bg-malachite-950 dark:opacity-60 md:rounded-br-2xl"
           ></div>
-          <img
+          <NuxtImg
             class="aspect-[3/2] object-cover md:rounded-br-2xl lg:aspect-auto lg:h-full lg:w-full"
             :src="headerData.image || '/images/0.png'"
             alt=""

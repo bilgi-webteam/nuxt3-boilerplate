@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <NuxtLinkLocale to="/">
-      <img
+      <NuxtImg
         :src="
           'https://tbl.bilgi.edu.tr/brand-resources/logotypes/bilgi/' +
           oppositeColorMode +

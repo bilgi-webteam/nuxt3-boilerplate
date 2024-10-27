@@ -1,5 +1,5 @@
 <template>
-  <img
+  <NuxtImg
     src="https://picsum.photos/200/200?random=1"
     class="float-left mr-3 rounded-lg"
   />
@@ -59,7 +59,7 @@
     <li>Disrupt master cleanse authentic ennui 8-bit</li>
   </ul>
 
-  <img
+  <NuxtImg
     class="mb-4 h-auto w-full rounded-lg"
     src="https://picsum.photos/1280/768?random=1"
   />

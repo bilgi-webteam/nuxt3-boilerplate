@@ -22,9 +22,9 @@
           v-if="item.image"
           class="overflow-hidden rounded-t-lg object-cover md:max-h-28 md:max-w-80 md:rounded-l-lg md:rounded-tr-none"
         >
-          <img :src="item.image" :alt="item.short_16words" class="w-auto" />
+          <NuxtImg :src="item.image" :alt="item.short_16words" class="w-auto" />
         </div>
-        <div class="mx-4 mt-4 md:mx-0">
+        <div class="mx-4 mt-4 pl-4 md:mx-0">
           <h3 class="text-2xl">{{ item.title }}</h3>
           <p>{{ item.short_16words }}</p>
         </div>
@@ -44,9 +44,9 @@
           v-if="item.image"
           class="overflow-hidden rounded-t-lg object-cover md:max-h-28 md:max-w-80 md:rounded-l-lg md:rounded-tr-none"
         >
-          <img :src="item.image" :alt="item.short_16words" class="w-auto" />
+          <NuxtImg :src="item.image" :alt="item.short_16words" class="w-auto" />
         </div>
-        <div class="mx-4 mt-4 md:mx-0">
+        <div class="mx-4 mt-4 pl-4 md:mx-0">
           <h3 class="text-2xl">{{ item.title }}</h3>
           <p>{{ item.short_16words }}</p>
         </div>

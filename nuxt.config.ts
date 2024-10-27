@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "nuxt-gtag", // https://github.com/johannschopplich/nuxt-gtag#readme
     "@nuxtjs/google-fonts", // https://google-fonts.nuxtjs.org/
     "@nuxtjs/color-mode", // https://color-mode.nuxtjs.org/
+    "@nuxt/image", // https://image.nuxt.com/
   ],
   css: ["~/assets/css/main.css"],
   colorMode: {
@@ -22,6 +23,9 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  image: {
+    format: ["webp"],
   },
   runtimeConfig: {
     public: {
