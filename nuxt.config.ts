@@ -5,6 +5,7 @@ const BASE_URL = "test.bilgi.edu.tr";
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
+
   modules: [
     "@nuxtjs/i18n", // https://i18n.nuxtjs.org/
     "nuxt-gtag", // https://github.com/johannschopplich/nuxt-gtag#readme
@@ -12,21 +13,26 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode", // https://color-mode.nuxtjs.org/
     "@nuxt/image", // https://image.nuxt.com/
   ],
+
   css: ["~/assets/css/main.css"],
+
   colorMode: {
     preference: "light", // default value of $colorMode.preference (dark/light/system)
     fallback: "light",
     classSuffix: "",
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   image: {
     format: ["webp"],
   },
+
   runtimeConfig: {
     public: {
       siteurl: `https://${BASE_URL}`,
@@ -34,6 +40,7 @@ export default defineNuxtConfig({
       email: "info@bilgi.edu.tr",
     },
   },
+
   $development: {
     runtimeConfig: {
       public: {
@@ -41,6 +48,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
@@ -53,8 +61,8 @@ export default defineNuxtConfig({
     langDir: "lang",
     customRoutes: "config",
     locales: [
-      { code: "en", iso: "en-GB", name: "English", file: "en.ts" },
-      { code: "tr", iso: "tr-TR", name: "Türkçe", file: "tr.ts" },
+      { code: "en", name: "English", file: "en.ts" },
+      { code: "tr", name: "Türkçe", file: "tr.ts" },
     ],
     pages: {
       about: {
@@ -83,9 +91,11 @@ export default defineNuxtConfig({
       },
     },
   },
+
   gtag: {
     id: "G-BGTG2XSDPD",
   },
+
   googleFonts: {
     families: {
       Raleway: "100..900",
@@ -97,4 +107,6 @@ export default defineNuxtConfig({
       // Inter: '200..700',
     },
   },
+
+  compatibilityDate: "2024-10-27",
 });

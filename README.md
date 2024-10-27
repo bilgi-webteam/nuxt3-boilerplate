@@ -12,13 +12,13 @@ cd test.bilgi.edu.tr
 **yarn** ile paketleri kur.
 
 ```bash
-yarn install
+npm install
 ```
 
 ## Geliştirme
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Tarayıcıda http://localhost:3000 adresini aç.
@@ -211,7 +211,7 @@ Sitenin sunucu IP ve klasör bilgilerini (test.bilgi.edu.tr) gir.
 Yukarıdaki ayar yapıldıysa aşağıdaki komutu çalıştır.
 
 ```bash
-yarn deploy
+npm run deploy
 ```
 
 Bu komut sırasıyla;

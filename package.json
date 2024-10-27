@@ -22,28 +22,31 @@
     "deploy": "yarn deldist:local && nuxt generate && yarn deldist:server && yarn copydist:server"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.21",
-    "@heroicons/vue": "^2.1.3",
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.1.5",
     "@nuxt/image": "^1.8.1",
-    "nuxt": "^3.11.2",
-    "nuxt-gtag": "^2.0.5",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "nuxt": "^3.13.2",
+    "nuxt-gtag": "^3.0.1",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.4.0",
+    "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/i18n": "^8.3.0",
-    "@unocss/reset": "latest",
-    "autoprefixer": "^10.4.19",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@unocss/reset": "0.63.6",
+    "autoprefixer": "^10.4.20",
     "floating-vue": "latest",
-    "postcss": "^8.4.38",
-    "prettier": "^3.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.1",
-    "rollup": "^4.16.4",
-    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "rollup": "4.24.1",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.4.5",
-    "unocss": "latest",
-    "vite": "latest"
+    "unocss": "0.63.6",
+    "vite": "5.4.10"
+  },
+  "resolutions": {
+    "rollup": "4.24.0"
   }
 }
